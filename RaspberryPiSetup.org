@@ -1,0 +1,20 @@
+
+https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font
+
+In order to install Source Code Pro, you can:
+
+Go to Google Fonts
+Type source code in the search box (the only match should be Source Code Pro)
+Click "Add to collection"
+Click on the text sample (this should present all the font styles)
+Tick all the check boxes
+Click the download icon (a down arrow on the top right) and download as Zip file
+Now you just need to decompress the Zip file into your ~/.fonts folder:
+
+mkdir -p ~/.fonts/Source_Code_Pro
+unzip Source_Code_Pro.zip  -d ~/.fonts/Source_Code_Pro
+You may need to run
+
+fc-cache -f
+to make the fonts available (no need to log out).
+
