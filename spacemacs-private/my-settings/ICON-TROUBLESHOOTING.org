@@ -1,0 +1,255 @@
+#+TITLE: Icon Package and Font Troubleshooting
+
+* Current setup
+
+=my-settings= uses Centaur Tabs from
+=my-settings/local/centaur-tabs= and configures its icon type as
+=all-the-icons=. The =spacemacs-visual= layer owns =all-the-icons=; the
+=my-settings= layer must not define another init function for it. The current
+tab height is 70. Nerd Icons and its integrations have been removed from this
+configuration.
+
+The Centaur Tabs icons were confirmed working after patching its local source.
+The troubleshooting steps and results below explain how the issue was isolated
+and how to repeat the checks if it returns.
+
+Package availability, font visibility, icon generation, and tab-line display are
+separate stages. A package can load while fonts are unavailable, and a font
+family is not necessarily named after the Emacs Lisp package using it.
+
+* Investigation record
+
+** 1. Check package availability and loading
+
+The initial startup messages reported =Cannot load= for =nerd-icons= and
+=centaur-tabs= even though they were declared in Spacemacs. The packages were
+already installed. Checking =locate-library= for Nerd Icons returned its ELPA
+library path. Manually evaluating =(require 'nerd-icons)= and
+=(require 'centaur-tabs)= returned their feature symbols, confirming both
+libraries could load in that session. =featurep= returned =nil= before a manual
+=require= and =t= afterward. This showed that an earlier startup load failure
+was not caused by an already-loaded feature.
+
+When Nerd Icons is installed and you specifically need to test it, evaluate:
+
+#+begin_src emacs-lisp
+(require 'nerd-icons)
+(featurep 'nerd-icons)
+#+end_src
+
+Successful results are =nerd-icons= and =t=. Nerd Icons has since been removed
+from this configuration, so =require= will fail if Spacemacs has uninstalled
+the package; that is expected and is not a failure of the current
+=all-the-icons= setup.
+
+For any future startup-only load warning, compare manual =require= with the
+complete error in =*Messages*=. A successful manual =require= does not establish
+that the package was initialized at the right time during startup.
+
+** 2. Confirm Centaur Tabs configuration runs
+
+The configuration was evaluated and checked with:
+
+#+begin_src emacs-lisp
+(list centaur-tabs-height
+      centaur-tabs-icon-type
+      centaur-tabs-set-icons
+      (bound-and-true-p centaur-tabs-mode))
+#+end_src
+
+The values were correct, and increasing =centaur-tabs-height= to 200 visibly
+increased the tab bar. This confirmed the local configuration was applied; tab
+height was not the cause of the missing icons.
+
+** 3. Confirm icon fonts and glyph rendering
+
+These checks were run in the graphical Emacs session where the tabs are shown.
+The broad search returned families including =all-the-icons=, =file-icons=,
+=Material Icons=, =FontAwesome=, and =github-octicons=. The check
+=(find-font (font-spec :family "all-the-icons"))= also found the family.
+
+Testing =all-the-icons-icon-for-file= directly for =foo.el= and =foo.py=
+inserted visible glyphs into a buffer. This established that the API generated
+icons and the font could render them. For Boolean checks, use =if=: =member=
+returns the matching list tail, not just =t=. Run font checks in a graphical
+session; terminal Emacs may not expose display fonts. If fonts are missing,
+install them with =M-x all-the-icons-install-fonts=, restart graphical Emacs,
+and check again.
+
+For a quick smoke test, evaluate this in a normal buffer with =M-:=. It prompts
+for any file and inserts that file's automatically selected icon at point:
+
+#+begin_src emacs-lisp
+(insert (all-the-icons-icon-for-file (read-file-name "File: ")))
+#+end_src
+
+For a fixed extension test, this inserts the icon selected for an Emacs Lisp
+file:
+
+#+begin_src emacs-lisp
+(insert (all-the-icons-icon-for-file "foo.el"))
+#+end_src
+
+The icon string carries font properties, so evaluate the expression as Lisp in
+a buffer; do not type or paste the resulting private-use glyph into the =M-x=
+command prompt.
+
+** 4. Isolate Centaur Tabs icon suppression
+
+With point in a file-visiting buffer, this diagnostic compared Centaur Tabs'
+generated icon with its final icon result. Evaluate it using =M-:= or =C-x C-e=
+so the icon glyph is not sent to the =M-x= command prompt:
+
+#+begin_src emacs-lisp
+(let* ((icon (centaur-tabs--icon-for-buffer
+              :height centaur-tabs-icon-scale-factor
+              :v-adjust centaur-tabs-icon-v-adjust))
+       (char (and (stringp icon)
+                  (> (length icon) 0)
+                  (aref icon 0)))
+       (tab-icon (centaur-tabs-icon
+                  (list (current-buffer))
+                  'centaur-tabs-selected
+                  t)))
+  (list :icon-type centaur-tabs-icon-type
+        :icons-enabled centaur-tabs-set-icons
+        :icon-generated (and (stringp icon) (> (length icon) 0))
+        :codepoint (and char (format "U+%04X" char))
+        :char-displayable (and char (char-displayable-p char))
+        :tab-icon-generated
+        (and (stringp tab-icon) (> (length tab-icon) 0))))
+#+end_src
+
+The observed result was =:icon-type all-the-icons=,
+=:icons-enabled t=, =:icon-generated t=, a private-use codepoint such as
+=U+E926=, =:char-displayable nil=, and =:tab-icon-generated nil=. Thus the
+icon package and font were working, but the installed Centaur Tabs code
+discarded the generated icon at its =char-displayable-p= check. That check was
+applied to a bare character even though the generated, fontified icon string
+rendered when inserted directly.
+
+** 5. Use and patch a local Centaur Tabs package
+
+Editing the managed ELPA copy and freezing it was considered, but a local copy
+is easier to maintain. The Centaur Tabs source was placed in
+=my-settings/local/centaur-tabs=. In =packages.el= it is declared with
+=:location local=. The local =centaur-tabs-elements.el= was changed to accept an
+icon string when it is a string with non-zero length, instead of additionally
+testing the bare first character with =char-displayable-p=. Emacs then preserves
+and renders the string's font properties.
+
+Use source =.el= files, not compiled =.elc= files, so stale bytecode cannot
+shadow the patch. Keep =powerline= available because Centaur Tabs declares it
+as a dependency.
+
+** 6. Resolve duplicate package ownership
+
+Spacemacs warned that more than one init function was found for =all-the-icons=:
+its previous owner was =spacemacs-visual=, but =my-settings= also defined an
+init function. Remove the =my-settings/init-all-the-icons= function and do not
+add =all-the-icons= to =my-settings-packages=; keep it owned by
+=spacemacs-visual=. This removed the competing ownership while allowing Centaur
+Tabs to use the package.
+
+Nerd Icons and its integrations were later removed from the layer and from
+=dotspacemacs-additional-packages= to focus the setup on =all-the-icons=.
+Spacemacs package synchronization removes packages no longer used according to
+=dotspacemacs-install-packages=; do not manually delete ELPA directories while
+Emacs is running.
+
+** 7. Verify the final working setup
+
+After package/layer changes, run =SPC f e R= to resynchronize the dotfile, then
+restart Spacemacs. The final setup reports the expected Centaur Tabs settings,
+and file icons now display in the Centaur Tabs bar. If they disappear again,
+repeat the package, font, and Centaur Tabs icon diagnostic checks above in that
+order.
+
+* Quick verification
+
+Evaluate these expressions in a session after Spacemacs has initialized:
+
+#+begin_src emacs-lisp
+(require 'all-the-icons)
+(featurep 'all-the-icons)
+(require 'centaur-tabs)
+(featurep 'centaur-tabs)
+#+end_src
+
+=require= returns the feature symbol on success; =featurep= is non-nil after the
+feature has loaded. Check the full =*Messages*= error if startup and manual
+loading differ.
+
+* Verify fonts visible to Emacs
+
+Run these checks in a graphical Emacs session. The font family list reports
+font families visible to the current Emacs display; it does not report Lisp
+package or feature names.
+
+To see icon-related families available in the current graphical session:
+
+#+begin_src emacs-lisp
+(seq-filter
+ (lambda (family)
+   (string-match-p "icon\\|font awesome\\|material\\|octicons\\|weather"
+                   (downcase family)))
+ (font-family-list))
+#+end_src
+
+=all-the-icons= uses installed font families for its glyph sets; exact names
+depend on the fonts installed. To install the font set provided by the package,
+run =M-x all-the-icons-install-fonts=, follow its prompts, restart Emacs, and
+repeat the checks. Terminal Emacs may not expose graphical fonts, so run these
+checks in the GUI session where the tabs are displayed.
+
+Use this compact check for the Centaur Tabs backend font:
+
+#+begin_src emacs-lisp
+(if (find-font (font-spec :family "all-the-icons"))
+            "available"
+      "not visible to Emacs")
+#+end_src
+
+If the broad family search or =find-font= check shows no relevant families,
+they are not currently visible to this Emacs display. Run
+=M-x all-the-icons-install-fonts=, restart the graphical Emacs session, then
+repeat the checks.
+
+* Verify Centaur Tabs settings
+
+After the layer initializes, evaluate:
+
+#+begin_src emacs-lisp
+(list centaur-tabs-height
+      centaur-tabs-icon-type
+      (bound-and-true-p centaur-tabs-mode))
+#+end_src
+
+With the current settings, expect height =70=, icon type =all-the-icons=, and a
+non-nil mode value. Correct variable values confirm the configuration ran, but
+do not prove the fonts are available or that glyphs render; use the font checks
+above for that.
+
+* Lexical binding in scratch and config files
+
+Lexical binding is a buffer/file setting, not a global switch to enable for all
+Emacs Lisp. In Emacs 31, =*scratch*= uses =lisp-interaction-mode=, which enables
+lexical binding by default. Check the current buffer with:
+
+#+begin_src emacs-lisp
+(list major-mode lexical-binding)
+#+end_src
+
+For an Emacs Lisp file, use a file-local cookie on its first line, for example:
+
+#+begin_src emacs-lisp
+;;; example.el --- Description.  -*- lexical-binding: t; -*-
+#+end_src
+
+The layer's =config.el= and =funcs.el= already use this cookie. The command
+=M-x elisp-enable-lexical-binding= affects only the current buffer; in a file
+buffer it also writes a file-local cookie so the setting persists. It may ask
+for confirmation. Avoid setting =lexical-binding= globally, since existing
+Emacs Lisp files may intentionally rely on dynamic binding. If evaluating Lisp
+still errors in =*scratch*=, inspect the actual error; lexical binding may not
+be the cause.

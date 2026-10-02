@@ -1,0 +1,43 @@
+#+TITLE: my-settings layer
+#+TAGS: layer
+
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+  - [[#features][Features]]
+- [[#install][Install]]
+- [[#icon-troubleshooting][Icon troubleshooting]]
+- [[#key-bindings][Key bindings]]
+
+* Description
+Personal Spacemacs settings, search and replace, and tab icons.
+
+** Features
+- CUA mode, with Org's disputed Shift-arrow bindings assigned to CUA
+- =C-a= selects the buffer; =C-f= searches forward; =C-y= redoes an undo
+- =C-c r= opens the prompted search-and-replace command
+- Menu bar enabled
+- Centaur Tabs using =all-the-icons= from the =spacemacs-visual= layer
+
+* Install
+Add =my-settings= to =dotspacemacs-configuration-layers= in your Spacemacs
+configuration. The layer declares the patched local Centaur Tabs source.
+=all-the-icons= remains owned by the =spacemacs-visual= layer. =powerline= is
+listed as an additional package because the local Centaur Tabs package requires
+it.
+
+Install the fonts provided by =all-the-icons= with
+=M-x all-the-icons-install-fonts=, then restart Spacemacs.
+
+* Icon troubleshooting
+
+See [[file:ICON-TROUBLESHOOTING.org][Icon Package and Font Troubleshooting]] for package-load and font-visibility
+checks.
+
+* Key bindings
+
+| Key | Action |
+|-----+--------|
+| =C-a= | Select the entire buffer |
+| =C-f= | Search forward; =C-s= remains available |
+| =C-y= | Redo the last undo |
+| =C-c r= | Prompted search and replace |
