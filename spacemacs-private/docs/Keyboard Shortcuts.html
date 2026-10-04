@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Verified GNU Emacs 31 and Emacs-style Spacemacs keyboard shortcuts for this configuration.">
+  <title>Emacs Keyboard Shortcuts</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172b3a;
+      --muted: #526878;
+      --line: #c9d9df;
+      --rule: #72aeb5;
+      --wash: #edf5f5;
+      --paper: #fff;
+      --key-bg: #f6f8f8;
+      --key-edge: #bac9ce;
+      --accent: #126c73;
+      --notice: #eff6ed;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #e7eeee;
+      color: var(--ink);
+      font: 15px/1.5 "Segoe UI", "Trebuchet MS", sans-serif;
+    }
+    .page {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 26px;
+      width: min(1220px, calc(100% - 40px));
+      margin: 28px auto;
+      align-items: start;
+    }
+    aside {
+      position: sticky;
+      top: 20px;
+      padding: 18px 16px;
+      border-top: 3px solid var(--accent);
+      background: var(--paper);
+    }
+    .outline-title, .eyebrow {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    nav { display: grid; gap: 5px; }
+    nav a {
+      padding: 5px 7px;
+      border-left: 2px solid transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+    }
+    nav a:hover, nav a:focus-visible {
+      border-left-color: var(--accent);
+      background: var(--wash);
+      outline: none;
+    }
+    main {
+      min-width: 0;
+      padding: 34px 42px 44px;
+      background: var(--paper);
+      box-shadow: 0 8px 28px #243e4a18;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: start;
+      padding-bottom: 23px;
+      border-bottom: 2px solid var(--rule);
+    }
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+    .subtitle { margin: 8px 0 0; color: var(--muted); }
+    .print-button {
+      flex: none;
+      padding: 8px 12px;
+      border: 1px solid var(--key-edge);
+      border-radius: 4px;
+      background: var(--paper);
+      color: var(--ink);
+      font: inherit;
+      cursor: pointer;
+    }
+    .print-button:hover { border-color: var(--accent); color: var(--accent); }
+    .notation, .configuration-note {
+      margin: 19px 0 22px;
+      padding: 12px 15px;
+      border-left: 3px solid var(--rule);
+      background: var(--wash);
+      color: #304b59;
+    }
+    .configuration-note {
+      border-color: #83a77c;
+      background: var(--notice);
+    }
+    .notation p, .configuration-note p { margin: 0; }
+    .notation p + p, .configuration-note p + p { margin-top: 7px; }
+    .search-wrap { margin: 20px 0 24px; }
+    label[for="shortcut-search"] {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    #shortcut-search {
+      width: min(100%, 440px);
+      padding: 9px 11px;
+      border: 1px solid var(--key-edge);
+      border-radius: 3px;
+      color: var(--ink);
+      font: inherit;
+    }
+    #shortcut-search:focus { outline: 2px solid #72aeb566; border-color: var(--accent); }
+    section { margin-top: 26px; scroll-margin-top: 18px; }
+    h2 {
+      margin: 0;
+      padding: 7px 10px;
+      border-top: 2px solid var(--rule);
+      border-bottom: 1px solid var(--line);
+      background: var(--wash);
+      color: #183d49;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .06em;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    th:last-child, td.keys { width: 36%; }
+    td {
+      padding: 9px 10px;
+      border-bottom: 1px solid #e3ebed;
+      vertical-align: middle;
+    }
+    tr:hover td { background: #f8fbfb; }
+    td.keys { white-space: normal; }
+    kbd {
+      display: inline-block;
+      min-width: 27px;
+      margin: 1px 2px 1px 0;
+      padding: 2px 6px;
+      border: 1px solid var(--key-edge);
+      border-bottom-width: 2px;
+      border-radius: 4px;
+      background: var(--key-bg);
+      color: #183541;
+      font: 600 12px/1.35 "Cascadia Code", Consolas, monospace;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .then { padding: 0 3px; color: #778a92; font-size: 12px; }
+    .binding-type {
+      display: inline-block;
+      margin-left: 5px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    footer {
+      margin-top: 27px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .empty { display: none; padding: 18px 10px; color: var(--muted); }
+    @media (max-width: 780px) {
+      .page { display: block; width: min(100% - 20px, 700px); margin: 10px auto; }
+      aside { position: static; margin-bottom: 10px; padding: 12px; }
+      nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      main { padding: 24px 18px 30px; }
+      header { align-items: center; }
+      h1 { font-size: 26px; }
+      td { padding: 8px 6px; }
+      th:last-child, td.keys { width: 42%; }
+    }
+    @media (max-width: 430px) {
+      header { align-items: start; }
+      .print-button { padding: 7px 8px; font-size: 12px; }
+      h1 { font-size: 23px; }
+      th:first-child, td:first-child { width: 55%; }
+      th:last-child, td.keys { width: 45%; }
+      kbd { min-width: 24px; padding: 2px 4px; font-size: 11px; }
+    }
+    @page { size: A4 landscape; margin: 12mm; }
+    @media print {
+      body { background: white; font-size: 10pt; }
+      .page { display: block; width: auto; margin: 0; }
+      aside, .search-wrap, .print-button { display: none !important; }
+      main { padding: 0; box-shadow: none; }
+      header { padding-bottom: 10px; }
+      h1 { font-size: 23pt; }
+      section { margin-top: 13px; break-inside: avoid; }
+      h2 { font-size: 12pt; }
+      td { padding: 4px 7px; }
+      kbd { padding: 1px 4px; background: white; }
+      tr:hover td { background: transparent; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside aria-label="Shortcut sections">
+      <p class="outline-title">Outline</p>
+      <nav>
+        <a href="#general">General</a>
+        <a href="#files">Files</a>
+        <a href="#editing">Editing and search</a>
+        <a href="#buffers">Buffers</a>
+        <a href="#windows">Windows</a>
+        <a href="#spacemacs">Spacemacs</a>
+        <a href="#projects">Projects</a>
+        <a href="#git">Git</a>
+        <a href="#dired">Dired</a>
+        <a href="#org">Org mode</a>
+        <a href="#spelling">Spelling</a>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">Personal reference · GNU Emacs 31 · Spacemacs</p>
+          <h1>Keyboard Shortcuts</h1>
+          <p class="subtitle">Verified for this Emacs-style configuration</p>
+        </div>
+        <button class="print-button" type="button" onclick="window.print()">Print</button>
+      </header>
+
+      <div class="notation">
+        <p><strong>Notation:</strong> <kbd>^</kbd> means Control, <kbd>M</kbd> means Meta (usually Alt),
+          and <kbd>S</kbd> means Shift. A sequence separated by “then” is typed in order;
+          for example <kbd>^X</kbd><span class="then">then</span><kbd>^F</kbd>.</p>
+        <p>The leader chord is <kbd>M-m</kbd> (Meta+m).
+          CUA changes are called out explicitly; the refcard’s default meaning does not always apply.</p>
+      </div>
+
+      <div class="configuration-note">
+        <p><strong>Configured CUA keys:</strong> <kbd>^A</kbd> select all, <kbd>^F</kbd> search forward,
+          <kbd>^Y</kbd> redo, <kbd>^W</kbd> cut/kill region, and <kbd>^V</kbd> paste.</p>
+        <p>In particular, <kbd>^Y</kbd> is redo here, not Emacs’ usual yank. The layer’s
+          <kbd>^C</kbd><span class="then">then</span><kbd>R</kbd> opens its search-and-replace prompt.</p>
+      </div>
+
+      <div class="search-wrap">
+        <label for="shortcut-search">Filter shortcuts</label>
+        <input id="shortcut-search" type="search" placeholder="Search commands or keys" autocomplete="off">
+      </div>
+
+      <section id="general">
+        <h2>General</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Run a command by name</td><td class="keys"><kbd>M</kbd><span class="then">then</span><kbd>X</kbd></td></tr>
+          <tr><td>Abort the current command or prompt</td><td class="keys"><kbd>^G</kbd></td></tr>
+          <tr><td>Exit Emacs</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>^C</kbd></td></tr>
+          <tr><td>Undo</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>U</kbd></td></tr>
+          <tr><td>Redo (CUA configuration)</td><td class="keys"><kbd>^Y</kbd><span class="binding-type">configured</span></td></tr>
+          <tr><td>Get help for a key or command</td><td class="keys"><kbd>^H</kbd><span class="then">then</span><kbd>K</kbd> or <kbd>F</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="files">
+        <h2>Files</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Open a file</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>^F</kbd></td></tr>
+          <tr><td>Save current file</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>^S</kbd></td></tr>
+          <tr><td>Save all modified files</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>S</kbd></td></tr>
+          <tr><td>Write buffer to another file</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>^W</kbd></td></tr>
+          <tr><td>Open recent files</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>F</kbd><span class="then">then</span><kbd>R</kbd></td></tr>
+          <tr><td>Find files with Spacemacs completion</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>F</kbd><span class="then">then</span><kbd>F</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="editing">
+        <h2>Editing and Search</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Select entire buffer (CUA)</td><td class="keys"><kbd>^A</kbd><span class="binding-type">configured</span></td></tr>
+          <tr><td>Search forward (CUA)</td><td class="keys"><kbd>^F</kbd><span class="binding-type">configured</span></td></tr>
+          <tr><td>Incremental search backward</td><td class="keys"><kbd>^R</kbd></td></tr>
+          <tr><td>Incremental search forward</td><td class="keys"><kbd>^S</kbd></td></tr>
+          <tr><td>Cut active region (CUA)</td><td class="keys"><kbd>^W</kbd><span class="binding-type">configured</span></td></tr>
+          <tr><td>Copy active region</td><td class="keys"><kbd>M</kbd><span class="then">then</span><kbd>W</kbd></td></tr>
+          <tr><td>Paste clipboard (CUA)</td><td class="keys"><kbd>^V</kbd><span class="binding-type">configured</span></td></tr>
+          <tr><td>Query-replace text</td><td class="keys"><kbd>M</kbd><span class="then">then</span><kbd>%</kbd></td></tr>
+          <tr><td>Layer search and replace (prompts for options)</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>R</kbd><span class="binding-type">configured</span></td></tr>
+          <tr><td>Set mark / begin a selection</td><td class="keys"><kbd>^SPC</kbd></td></tr>
+          <tr><td>Kill to end of line</td><td class="keys"><kbd>^K</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="buffers">
+        <h2>Buffers</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Switch buffer</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>B</kbd></td></tr>
+          <tr><td>List buffers</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>^B</kbd></td></tr>
+          <tr><td>Kill current buffer</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>K</kbd></td></tr>
+          <tr><td>Choose a buffer with Helm</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>B</kbd><span class="then">then</span><kbd>B</kbd></td></tr>
+          <tr><td>Next / previous buffer</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>B</kbd><span class="then">then</span><kbd>N</kbd> / <kbd>P</kbd></td></tr>
+          <tr><td>Kill current buffer (Spacemacs)</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>B</kbd><span class="then">then</span><kbd>D</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="windows">
+        <h2>Windows</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Move to another window</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>O</kbd></td></tr>
+          <tr><td>Delete current window</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>0</kbd></td></tr>
+          <tr><td>Keep only current window</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>1</kbd></td></tr>
+          <tr><td>Split above/below</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>2</kbd></td></tr>
+          <tr><td>Split side-by-side</td><td class="keys"><kbd>^X</kbd><span class="then">then</span><kbd>3</kbd></td></tr>
+          <tr><td>Move between windows</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>W</kbd><span class="then">then</span><kbd>W</kbd></td></tr>
+          <tr><td>Split below / right</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>W</kbd><span class="then">then</span><kbd>-</kbd> / <kbd>/</kbd></td></tr>
+          <tr><td>Delete current window</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>W</kbd><span class="then">then</span><kbd>D</kbd></td></tr>
+          <tr><td>Undo window layout change</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>W</kbd><span class="then">then</span><kbd>U</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="spacemacs">
+        <h2>Spacemacs (Emacs Style)</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Open the Spacemacs command menu</td><td class="keys"><kbd>M-m</kbd></td></tr>
+          <tr><td>Run a command with fuzzy completion</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>SPC</kbd></td></tr>
+          <tr><td>Switch to alternate buffer</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>TAB</kbd></td></tr>
+          <tr><td>Open Dired</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>A</kbd><span class="then">then</span><kbd>D</kbd></td></tr>
+          <tr><td>Jump to current file in Dired</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>F</kbd><span class="then">then</span><kbd>J</kbd></td></tr>
+          <tr><td>Search the current project</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>/</kbd></td></tr>
+          <tr><td>Expand region</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>V</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Switch project</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>P</kbd><span class="then">then</span><kbd>P</kbd></td></tr>
+          <tr><td>Find file in project</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>P</kbd><span class="then">then</span><kbd>F</kbd></td></tr>
+          <tr><td>Recent project files</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>P</kbd><span class="then">then</span><kbd>R</kbd></td></tr>
+          <tr><td>Run project</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>P</kbd><span class="then">then</span><kbd>U</kbd></td></tr>
+          <tr><td>Compile project</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>P</kbd><span class="then">then</span><kbd>C</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="git">
+        <h2>Git</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Open Magit status</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>G</kbd><span class="then">then</span><kbd>S</kbd></td></tr>
+          <tr><td>Open Magit command dispatcher</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>G</kbd><span class="then">then</span><kbd>M</kbd></td></tr>
+          <tr><td>Clone repository</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>G</kbd><span class="then">then</span><kbd>C</kbd></td></tr>
+          <tr><td>Git grep</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>G</kbd><span class="then">then</span><kbd>/</kbd></td></tr>
+          <tr><td>Choose files to stage</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>G</kbd><span class="then">then</span><kbd>S</kbd></td></tr>
+          <tr><td>Choose files to unstage</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>G</kbd><span class="then">then</span><kbd>U</kbd></td></tr>
+          <tr><td>Git blame transient state</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>G</kbd><span class="then">then</span><kbd>B</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="dired">
+        <h2>Dired</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Open Dired at a directory</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>A</kbd><span class="then">then</span><kbd>D</kbd></td></tr>
+          <tr><td>Jump to file in Dired</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>F</kbd><span class="then">then</span><kbd>J</kbd></td></tr>
+          <tr><td>Move between entries / open entry</td><td class="keys"><kbd>N</kbd> / <kbd>P</kbd>; <kbd>RET</kbd></td></tr>
+          <tr><td>Mark / flag for deletion</td><td class="keys"><kbd>M</kbd> / <kbd>D</kbd></td></tr>
+          <tr><td>Delete flagged entries</td><td class="keys"><kbd>X</kbd></td></tr>
+          <tr><td>Copy / move marked entries</td><td class="keys"><kbd>C</kbd> / <kbd>R</kbd></td></tr>
+          <tr><td>Refresh directory listing</td><td class="keys"><kbd>G</kbd></td></tr>
+          <tr><td>Dired Quick Sort menu</td><td class="keys"><kbd>S</kbd></td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="org">
+        <h2>Org Mode</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Read the Org manual</td><td class="keys"><kbd>M-x</kbd> <span class="binding-type">then type</span> <kbd>org-info</kbd></td></tr>
+          <tr><td>Cycle current heading visibility</td><td class="keys"><kbd>TAB</kbd></td></tr>
+          <tr><td>Cycle visibility for the whole buffer</td><td class="keys"><kbd>S-TAB</kbd></td></tr>
+          <tr><td>Reveal context around point</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>^R</kbd></td></tr>
+          <tr><td>Next / previous heading at same level</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>^F</kbd> / <kbd>^C</kbd><span class="then">then</span><kbd>^B</kbd></td></tr>
+          <tr><td>Insert heading or item at current level</td><td class="keys"><kbd>M-RET</kbd></td></tr>
+          <tr><td>Insert heading after current subtree</td><td class="keys"><kbd>^RET</kbd></td></tr>
+          <tr><td>Insert TODO heading</td><td class="keys"><kbd>M-S-RET</kbd></td></tr>
+          <tr><td>Cycle TODO state</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>^T</kbd></td></tr>
+          <tr><td>Promote / demote current heading</td><td class="keys"><kbd>M-←</kbd> / <kbd>M-→</kbd></td></tr>
+          <tr><td>Promote / demote current subtree</td><td class="keys"><kbd>M-S-←</kbd> / <kbd>M-S-→</kbd></td></tr>
+          <tr><td>Schedule / set deadline</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>^S</kbd> / <kbd>^C</kbd><span class="then">then</span><kbd>^D</kbd></td></tr>
+          <tr><td>Insert timestamp</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>.</kbd></td></tr>
+          <tr><td>Insert / open link</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>^L</kbd> / <kbd>^C</kbd><span class="then">then</span><kbd>^O</kbd></td></tr>
+          <tr><td>Sort subtree, region, or plain list</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>^</kbd></td></tr>
+          <tr><td>Open agenda</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>A</kbd></td></tr>
+          <tr><td>Capture a note</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>C</kbd>; <kbd>M-m</kbd><span class="then">then</span><kbd>C</kbd><span class="then">then</span><kbd>C</kbd></td></tr>
+          <tr><td>Store link to current location</td><td class="keys"><kbd>^C</kbd><span class="then">then</span><kbd>L</kbd></td></tr>
+        </tbody></table>
+        <p class="subtitle">CUA mode uses Shift-arrow keys for selection. Org's reference-card Shift-arrow actions are disputed and are redirected by <code>org-replace-disputed-keys</code> when that setting is active. This guide therefore omits those Shift-arrow shortcuts; Meta-arrow heading movement remains available.</p>
+        <p class="subtitle">The agenda, capture, and stored-link keys are global Org bindings verified in the supplied live keybinding dump. Other entries are Org 9.8 mode bindings. The Spacemacs capture alternative is <kbd>M-m</kbd><span class="then">then</span><kbd>C</kbd><span class="then">then</span><kbd>C</kbd>.</p>
+      </section>
+
+      <section id="spelling">
+        <h2>Spelling</h2>
+        <table><thead><tr><th>Description</th><th>Keys</th></tr></thead><tbody>
+          <tr><td>Spelling command menu</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>S</kbd><span class="then">then</span><kbd>.</kbd></td></tr>
+          <tr><td>Check current buffer</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>S</kbd><span class="then">then</span><kbd>B</kbd></td></tr>
+          <tr><td>Check selected region</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>S</kbd><span class="then">then</span><kbd>R</kbd></td></tr>
+          <tr><td>Choose dictionary</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>S</kbd><span class="then">then</span><kbd>D</kbd></td></tr>
+          <tr><td>Toggle Flyspell in current buffer</td><td class="keys"><kbd>M-m</kbd><span class="then">then</span><kbd>S</kbd><span class="then">then</span><kbd>.</kbd>, then <kbd>T</kbd></td></tr>
+        </tbody></table>
+        <p class="subtitle">Hunspell and a dictionary must be configured before using Flyspell; automatic checking is currently off. See <a href="../my-settings/Setup-Spacemacs.org">Setup-Spacemacs</a>.</p>
+      </section>
+
+      <footer>
+        <p>Sources: GNU Emacs 31 Reference Card, the supplied Spacemacs keybinding dump, and this configuration's <code>.spacemacs</code> and private layer. Bindings may vary in other modes.</p>
+      </footer>
+      <p class="empty" id="empty-state" role="status">No matching shortcuts.</p>
+    </main>
+  </div>
+  <script>
+    const search = document.querySelector("#shortcut-search");
+    const emptyState = document.querySelector("#empty-state");
+    const sections = [...document.querySelectorAll("main section")];
+
+    search.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase();
+      let visibleRows = 0;
+
+      for (const section of sections) {
+        let sectionRows = 0;
+        for (const row of section.querySelectorAll("tbody tr")) {
+          const match = row.textContent.toLowerCase().includes(query);
+          row.hidden = !match;
+          if (match) sectionRows++;
+        }
+        section.hidden = sectionRows === 0;
+        visibleRows += sectionRows;
+      }
+
+      emptyState.style.display = visibleRows === 0 ? "block" : "none";
+    });
+  </script>
+</body>
+</html>

@@ -5,7 +5,15 @@
 - [[#description][Description]]
   - [[#features][Features]]
 - [[#install][Install]]
+- [[#packages][Packages]]
+  - [[#visual-regexp-and-visual-regexp-steroids][Visual Regexp and Visual Regexp Steroids]]
+  - [[#wgrep][Wgrep]]
+  - [[#embark][Embark]]
+  - [[#magit-delta][Magit Delta]]
+  - [[#dired][Dired+]]
+  - [[#dired-quick-sort][Dired Quick Sort]]
 - [[#icon-troubleshooting][Icon troubleshooting]]
+- [[#setup-guide][Setup guide]]
 - [[#key-bindings][Key bindings]]
 
 * Description
@@ -17,6 +25,8 @@ Personal Spacemacs settings, search and replace, and tab icons.
 - =C-c r= opens the prompted search-and-replace command
 - Menu bar enabled
 - Centaur Tabs using =all-the-icons= from the =spacemacs-visual= layer
+- Visual Regexp Steroids, Wgrep, Embark, and Magit Delta integrations
+- Dired+ loaded from =private/local/dired+=, with Dired Quick Sort using MSYS2 GNU utilities
 
 * Install
 Add =my-settings= to =dotspacemacs-configuration-layers= in your Spacemacs
@@ -25,13 +35,162 @@ configuration. The layer declares the patched local Centaur Tabs source.
 listed as an additional package because the local Centaur Tabs package requires
 it.
 
+With =dotspacemacs-install-packages= set to =used-only=, list packages you
+intend to keep in =dotspacemacs-additional-packages= in =~/.spacemacs=; otherwise
+Spacemacs can remove packages it considers unused. This setup explicitly lists
+=visual-regexp=, =visual-regexp-steroids=, =wgrep=, =embark=, and =magit-delta=.
+Steroids also declares =visual-regexp= as a dependency. =wgrep= and
+=magit-delta= are owned and initialized by Spacemacs' editing and Git layers;
+the private layer extends Delta activation but does not claim either package.
+=dired-quick-sort= is supplied by Spacemacs' editing layer. Dired+ is local
+source, not an ELPA package, and is not listed in =dotspacemacs-additional-packages=.
+
+The package declarations and initialization are in =my-settings/packages.el=.
+Dired+ is a local source file rather than an ELPA package: keep
+=private/local/dired+/dired+.el= in place; the layer adds that directory to
+=load-path= and loads Dired+ after built-in Dired.
+
 Install the fonts provided by =all-the-icons= with
 =M-x all-the-icons-install-fonts=, then restart Spacemacs.
+
+* Packages
+
+** Visual Regexp and Visual Regexp Steroids
+
+=visual-regexp-steroids= extends =visual-regexp= with Python, PCRE (through
+=pcre2el=), and custom regexp engines. Its package metadata requires
+=visual-regexp=, so Spacemacs installs the base package as a dependency. Both
+packages are initialized by the =my-settings= layer; the layer does not assign
+global keys to them. Upstream guides: [[https://github.com/benma/visual-regexp.el][visual-regexp]] and
+[[https://github.com/benma/visual-regexp-steroids.el][visual-regexp-steroids]].
+
+Typical use: run =M-x vr/replace=, enter a regexp, then enter its replacement.
+Matches and replacement results preview in the source buffer as you type; finish
+the command to replace them. For a prompt before each match, use
+=M-x vr/query-replace= instead. To create multiple cursors at regexp matches,
+use =M-x vr/mc-mark= (requires the configured =multiple-cursors= package).
+
+These commands have no global key binding in this setup; invoke them with =M-x=.
+The upstream READMEs show example bindings (=C-c r=, =C-c q=, and =C-c m=),
+but those examples are not installed here. Steroids supports modern regexp
+engines; =visual-regexp= alone uses Emacs regexp syntax.
+
+| Command | Use |
+|---------+-----|
+| =vr/replace= | Replace all matches with live preview while constructing the regexp and replacement |
+| =vr/query-replace= | Review and decide on each match |
+| =vr/mc-mark= | Select regexp matches as multiple cursors (requires =multiple-cursors=) |
+
+With the Python engine (the default in Steroids), the regexp prompt accepts
+=C-c i= (case-insensitive), =C-c m= (multiline), =C-c s= (dot matches newline),
+and =C-c u= (Unicode) to toggle modifiers. During replacement, =C-c C-c= toggles
+expression-based replacement. Set =vr/engine= to =emacs=, =emacs-plain=,
+=pcre2el=, =python=, or =custom= to choose the engine. Python is invoked through
+=vr/command-python=; set that option if your system's Python command is not
+named =python=.
+
+** Wgrep
+
+Wgrep makes =grep= result buffers editable and applies edits to the source files.
+Upstream guide: [[https://github.com/mhayashi1120/Emacs-wgrep][Emacs-wgrep]]. It is registered on
+=grep-setup-hook= by its package autoloads. Typical use: run =M-x grep=,
+=M-x rgrep=, or another grep-producing command; in the =*grep*= results buffer,
+press =C-c C-p= to make matches editable. Edit the matching text in the result
+buffer, then apply or discard the edits with:
+
+| Key | Action |
+|-----+--------|
+| =C-c C-e= | Apply changes to the source buffers |
+| =C-c C-u= | Unmark all changes so they are ignored |
+| =C-c C-d= | Mark the current result line for deletion |
+| =C-c C-r= | Discard changes in the selected region |
+| =C-c C-k= | Discard all changes and exit |
+| =C-x C-q= | Exit Wgrep mode |
+
+The key bindings below are Wgrep's defaults in a grep results buffer. The
+underlying source buffers are not automatically saved by default; save them
+normally after applying edits, or set =wgrep-auto-save-buffer= to non-nil.
+
+** Embark
+
+Upstream guide: [[https://github.com/oantolin/embark][Embark]]. The private layer binds =C-.= to =embark-act=,
+=C-;= to =embark-dwim=, and =C-h B= to =embark-bindings=. Typical use: put point
+on a file, symbol, URL, or region, or move to a minibuffer completion candidate,
+then press =C-.= and choose an action from the target's action map. Press =RET=
+after =C-.= to run the default action. Press =C-h= after =C-.= to choose an action
+by name. =C-;= immediately runs the default action for the first target; =C-h B=
+explores the bindings at point.
+
+Additional action-map keys (after =C-.=) include =SPC= to select/unselect a
+target, =A= to run an action on all candidates, =B= to become another minibuffer
+command, =S= to collect a snapshot, and =E= to export candidates (for example,
+file candidates to Dired). These are action keys, not standalone global
+bindings; action keys vary by target type.
+
+** Magit Delta
+
+Upstream guide: [[https://github.com/dandavison/magit-delta][magit-delta]]. It renders Magit diffs with the external
+=delta= program. Install Delta separately and ensure =delta.exe= is on Emacs'
+=PATH=; the Emacs package alone is not sufficient. The Git layer owns the
+package, and this setup enables its mode automatically in Magit buffers when
+=delta= is found. Typical use: open a repository with =M-x magit-status= (or
+Spacemacs' =SPC g s=), then inspect diffs as usual; Delta formats the diff
+display. Use =M-x magit-delta-mode= in a Magit buffer to toggle the integration
+manually. Magit Delta defines no dedicated keyboard shortcut.
+
+** Dired+
+
+Dired+ is loaded from =private/local/dired+/dired+.el= after built-in Dired.
+Its full upstream documentation is in that file's commentary; the following are
+the most useful additions and changes in this configuration. Upstream source:
+[[https://github.com/emacsmirror/dired-plus/blob/master/dired%2B.el][Dired+]].
+
+Typical use: open a directory with =M-x dired= or jump to a file's directory
+with =M-x dired-jump=. Move between entries with =n= and =p=, mark entries with
+=m= or flag them for deletion with =d=, then use =x= to delete flagged entries.
+Use =RET= to open the entry. Dired+ adds the shortcuts below; more commands are
+available in its menu-bar menus and the =mouse-3= context menu.
+
+| Key | Action |
+|-----+--------|
+| =n= / =p=, =C-n= / =C-p=, =<down>= / =<up>= | Move between entries with wraparound |
+| =e= | Visit the file on the current line |
+| =C-<down>= / =C-<up>= | Visit the next/previous file in another window while keeping focus in Dired |
+| =$= | Toggle visibility of the current inserted subdirectory without moving point |
+| =M-$= | Toggle subdirectory visibility and advance |
+| === | Compare the current file with another using Ediff |
+| =M-*= | Open a Dired listing of marked files in another window |
+| =M-+= | Prefix map for recursive operations on marked files and subdirectories |
+| =C-x D A= / =C-x D U= | Add files to a Dired buffer / form a union of Dired listings |
+| =C-x D R= / =C-x D r= | Open recent files / recent directories in Dired |
+| =C-x D S= | Open a fileset as a Dired listing |
+| =C-k= | Remove the current Dired entry line; this layer overrides Dired+'s file-delete binding |
+
+CUA mode takes precedence for =C-w= and =C-y=: they remain =kill-region= and
+=undo-redo= rather than Dired+'s file move/paste commands. Standard Dired keys
+such as =d= to flag marked entries and =x= to execute deletion remain available.
+In this layer, =C-k= removes the current listing line only; it does not delete
+the file. Use =d= followed by =x= for the usual confirmed deletion workflow.
+
+** Dired Quick Sort
+
+Spacemacs' editing layer provides Dired Quick Sort. On entering Dired, the
+layer sets up sorting; press =S= to open its transient menu. Select a sort mode
+there, such as name/version, size, or time, and use its options to reverse order
+or group directories. It requires GNU =ls=; this setup points Dired at
+=D:/Dev/Tools/msys64/usr/bin/ls.exe= and prepends the MSYS2 utility directory
+to Emacs' =exec-path= and subprocess =PATH=. See
+[[file:Setup-Spacemacs.org][Setup-Spacemacs]] for details and the Windows utility-path behavior.
 
 * Icon troubleshooting
 
 See [[file:ICON-TROUBLESHOOTING.org][Icon Package and Font Troubleshooting]] for package-load and font-visibility
 checks.
+
+* Setup guide
+
+See [[file:Setup-Spacemacs.org][Setup-Spacemacs]] for Hunspell installation, dictionary configuration,
+and enabling automatic Flyspell after the executable and dictionary are ready.
 
 * Key bindings
 

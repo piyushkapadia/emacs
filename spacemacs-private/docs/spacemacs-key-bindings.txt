@@ -1,0 +1,2381 @@
+M-m TAB   	spacemacs/alternate-buffer
+M-m SPC   	spacemacs/helm-M-x-fuzzy-matching
+M-m !     	shell-command
+M-m "     	terminal-here-launch
+M-m '     	spacemacs/default-pop-shell
+M-m *     	spacemacs/helm-project-smart-do-search-region-or-symbol
+M-m /     	spacemacs/helm-project-smart-do-search
+M-m 0     	winum-select-window-0-or-10
+M-m 1     	winum-select-window-1
+M-m 2     	winum-select-window-2
+M-m 3     	winum-select-window-3
+M-m 4     	winum-select-window-4
+M-m 5     	winum-select-window-5
+M-m 6     	winum-select-window-6
+M-m 7     	winum-select-window-7
+M-m 8     	winum-select-window-8
+M-m 9     	winum-select-window-9
+M-m ;     	evilnc-comment-operator
+M-m ?     	helm-descbinds
+M-m `     	winum-select-window-by-number
+M-m l     	spacemacs/layouts-transient-state/body
+M-m u     	universal-argument
+M-m v     	er/expand-region
+M-m ²     	winum-select-window-by-number
+M-m <f1>  	lazy-helm/helm-apropos
+<evilified-state> SPC TAB	spacemacs/alternate-buffer
+<evilified-state> SPC SPC	spacemacs/helm-M-x-fuzzy-matching
+<evilified-state> SPC !	shell-command
+<evilified-state> SPC "	terminal-here-launch
+<evilified-state> SPC '	spacemacs/default-pop-shell
+<evilified-state> SPC *	spacemacs/helm-project-smart-do-search-region-or-symbol
+<evilified-state> SPC /	spacemacs/helm-project-smart-do-search
+<evilified-state> SPC 0	winum-select-window-0-or-10
+<evilified-state> SPC 1	winum-select-window-1
+<evilified-state> SPC 2	winum-select-window-2
+<evilified-state> SPC 3	winum-select-window-3
+<evilified-state> SPC 4	winum-select-window-4
+<evilified-state> SPC 5	winum-select-window-5
+<evilified-state> SPC 6	winum-select-window-6
+<evilified-state> SPC 7	winum-select-window-7
+<evilified-state> SPC 8	winum-select-window-8
+<evilified-state> SPC 9	winum-select-window-9
+<evilified-state> SPC ;	evilnc-comment-operator
+<evilified-state> SPC ?	helm-descbinds
+<evilified-state> SPC `	winum-select-window-by-number
+<evilified-state> SPC l	spacemacs/layouts-transient-state/body
+<evilified-state> SPC u	universal-argument
+<evilified-state> SPC v	er/expand-region
+<evilified-state> SPC ²	winum-select-window-by-number
+<evilified-state> SPC <f1>	lazy-helm/helm-apropos
+<visual-state> SPC TAB	spacemacs/alternate-buffer
+<visual-state> SPC SPC	spacemacs/helm-M-x-fuzzy-matching
+<visual-state> SPC !	shell-command
+<visual-state> SPC "	terminal-here-launch
+<visual-state> SPC '	spacemacs/default-pop-shell
+<visual-state> SPC *	spacemacs/helm-project-smart-do-search-region-or-symbol
+<visual-state> SPC /	spacemacs/helm-project-smart-do-search
+<visual-state> SPC 0	winum-select-window-0-or-10
+<visual-state> SPC 1	winum-select-window-1
+<visual-state> SPC 2	winum-select-window-2
+<visual-state> SPC 3	winum-select-window-3
+<visual-state> SPC 4	winum-select-window-4
+<visual-state> SPC 5	winum-select-window-5
+<visual-state> SPC 6	winum-select-window-6
+<visual-state> SPC 7	winum-select-window-7
+<visual-state> SPC 8	winum-select-window-8
+<visual-state> SPC 9	winum-select-window-9
+<visual-state> SPC ;	evilnc-comment-operator
+<visual-state> SPC ?	helm-descbinds
+<visual-state> SPC `	winum-select-window-by-number
+<visual-state> SPC l	spacemacs/layouts-transient-state/body
+<visual-state> SPC u	universal-argument
+<visual-state> SPC v	er/expand-region
+<visual-state> SPC ²	winum-select-window-by-number
+<visual-state> SPC <f1>	lazy-helm/helm-apropos
+<motion-state> SPC TAB	spacemacs/alternate-buffer
+<motion-state> SPC SPC	spacemacs/helm-M-x-fuzzy-matching
+<motion-state> SPC !	shell-command
+<motion-state> SPC "	terminal-here-launch
+<motion-state> SPC '	spacemacs/default-pop-shell
+<motion-state> SPC *	spacemacs/helm-project-smart-do-search-region-or-symbol
+<motion-state> SPC /	spacemacs/helm-project-smart-do-search
+<motion-state> SPC 0	winum-select-window-0-or-10
+<motion-state> SPC 1	winum-select-window-1
+<motion-state> SPC 2	winum-select-window-2
+<motion-state> SPC 3	winum-select-window-3
+<motion-state> SPC 4	winum-select-window-4
+<motion-state> SPC 5	winum-select-window-5
+<motion-state> SPC 6	winum-select-window-6
+<motion-state> SPC 7	winum-select-window-7
+<motion-state> SPC 8	winum-select-window-8
+<motion-state> SPC 9	winum-select-window-9
+<motion-state> SPC ;	evilnc-comment-operator
+<motion-state> SPC ?	helm-descbinds
+<motion-state> SPC `	winum-select-window-by-number
+<motion-state> SPC l	spacemacs/layouts-transient-state/body
+<motion-state> SPC u	universal-argument
+<motion-state> SPC v	er/expand-region
+<motion-state> SPC ²	winum-select-window-by-number
+<motion-state> SPC <f1>	lazy-helm/helm-apropos
+<normal-state> SPC TAB	spacemacs/alternate-buffer
+<normal-state> SPC SPC	spacemacs/helm-M-x-fuzzy-matching
+<normal-state> SPC !	shell-command
+<normal-state> SPC "	terminal-here-launch
+<normal-state> SPC '	spacemacs/default-pop-shell
+<normal-state> SPC *	spacemacs/helm-project-smart-do-search-region-or-symbol
+<normal-state> SPC /	spacemacs/helm-project-smart-do-search
+<normal-state> SPC 0	winum-select-window-0-or-10
+<normal-state> SPC 1	winum-select-window-1
+<normal-state> SPC 2	winum-select-window-2
+<normal-state> SPC 3	winum-select-window-3
+<normal-state> SPC 4	winum-select-window-4
+<normal-state> SPC 5	winum-select-window-5
+<normal-state> SPC 6	winum-select-window-6
+<normal-state> SPC 7	winum-select-window-7
+<normal-state> SPC 8	winum-select-window-8
+<normal-state> SPC 9	winum-select-window-9
+<normal-state> SPC ;	evilnc-comment-operator
+<normal-state> SPC ?	helm-descbinds
+<normal-state> SPC `	winum-select-window-by-number
+<normal-state> SPC l	spacemacs/layouts-transient-state/body
+<normal-state> SPC u	universal-argument
+<normal-state> SPC v	er/expand-region
+<normal-state> SPC ²	winum-select-window-by-number
+<normal-state> SPC <f1>	lazy-helm/helm-apropos
+M-m F B   	spacemacs/display-buffer-other-frame
+M-m F D   	delete-other-frames
+M-m F O   	spacemacs/dired-other-frame
+M-m F b   	spacemacs/switch-to-buffer-other-frame
+M-m F d   	delete-frame
+M-m F f   	spacemacs/find-file-other-frame
+M-m F n   	make-frame
+M-m F o   	other-frame
+M-m D h   	ediff-documentation
+M-m D s   	ediff-show-registry
+M-m C-v N 	rectangle-number-lines
+M-m C-v c 	close-rectangle
+M-m C-v d 	delete-rectangle
+M-m C-v e 	rectangle-exchange-point-and-mark
+M-m C-v i 	copy-rectangle-to-register
+M-m C-v k 	kill-rectangle
+M-m C-v l 	rectangle-left-char
+M-m C-v m 	rectangle-mark-mode
+M-m C-v n 	rectangle-next-line
+M-m C-v o 	open-rectangle
+M-m C-v p 	rectangle-previous-line
+M-m C-v r 	rectangle-right-char
+M-m C-v s 	string-rectangle
+M-m C-v x 	clear-rectangle
+M-m C-v y 	yank-rectangle
+M-m K K   	kmacro-end-or-call-macro
+M-m K k   	kmacro-start-macro-or-insert-counter
+M-m K v   	kmacro-view-macro-repeat
+M-m p !   	projectile-run-shell-command-in-root
+M-m p "   	terminal-here-project-launch
+M-m p $   	spacemacs/projectile-shell
+M-m p %   	projectile-replace-regexp
+M-m p &   	projectile-run-async-shell-command-in-root
+M-m p '   	spacemacs/projectile-shell-pop
+M-m p D   	projectile-dired
+M-m p E   	projectile-find-references
+M-m p F   	helm-projectile-find-file-dwim
+M-m p I   	projectile-invalidate-cache
+M-m p R   	projectile-replace
+M-m p T   	projectile-test-project
+M-m p a   	projectile-toggle-between-implementation-and-test
+M-m p b   	helm-projectile-switch-to-buffer
+M-m p c   	projectile-compile-project
+M-m p d   	helm-projectile-find-dir
+M-m p e   	projectile-edit-dir-locals
+M-m p f   	helm-projectile-find-file
+M-m p h   	helm-projectile
+M-m p i   	projectile-install-project
+M-m p k   	projectile-kill-buffers
+M-m p l   	spacemacs/helm-persp-switch-project
+M-m p o   	spacemacs/org-project-capture-goto-todos
+M-m p p   	helm-projectile-switch-project
+M-m p r   	helm-projectile-recentf
+M-m p t   	spacemacs/treemacs-project-toggle
+M-m p u   	projectile-run-project
+M-m p v   	projectile-vc
+M-m T B   	spacemacs/scale-background-transparency-transient-state/spacemacs/toggle-background-transparency
+M-m T F   	spacemacs/toggle-fullscreen-frame
+M-m T M   	spacemacs/toggle-maximize-frame
+M-m T N   	spacemacs/theme-transient-state/spacemacs/cycle-spacemacs-theme-backward
+M-m T T   	spacemacs/scale-transparency-transient-state/body
+M-m T Z   	zone
+M-m T f   	spacemacs/toggle-fringe
+M-m T g   	spacemacs/toggle-gui-elements
+M-m T m   	spacemacs/toggle-menu-bar
+M-m T n   	spacemacs/theme-transient-state/spacemacs/cycle-spacemacs-theme
+M-m T s   	spacemacs/helm-themes
+M-m T t   	spacemacs/toggle-tool-bar
+M-m T ~   	spacemacs/toggle-vi-tilde-fringe
+M-m C c   	org-capture
+M-m C l   	lazy-helm/helm-colors
+M-m g *   	spacemacs/helm-git-grep-at-point
+M-m g /   	spacemacs/helm-git-grep
+M-m g L   	magit-list-repositories
+M-m g M   	git-messenger:popup-message
+M-m g S   	magit-stage-files
+M-m g U   	magit-unstage-files
+M-m g b   	spacemacs/git-blame-transient-state/body
+M-m g c   	magit-clone
+M-m g i   	magit-init
+M-m g m   	magit-dispatch
+M-m g s   	magit-status
+M-m g t   	spacemacs/time-machine-transient-state/body
+M-m S .   	spacemacs/spell-checking-transient-state/body
+M-m S b   	flyspell-buffer
+M-m S c   	flyspell-correct-wrapper
+M-m S d   	spell-checking/change-dictionary
+M-m S n   	flyspell-goto-next-error
+M-m S r   	flyspell-region
+M-m S s   	flyspell-correct-at-point
+M-m e .   	spacemacs/error-transient-state/body
+M-m e L   	spacemacs/goto-flycheck-error-list
+M-m e N   	spacemacs/previous-error
+M-m e S   	flycheck-set-checker-executable
+M-m e b   	flycheck-buffer
+M-m e c   	flycheck-clear
+M-m e d   	flycheck-disable-checker
+M-m e h   	flycheck-describe-checker
+M-m e l   	spacemacs/toggle-flycheck-error-list
+M-m e n   	spacemacs/next-error
+M-m e p   	spacemacs/previous-error
+M-m e s   	flycheck-select-checker
+M-m e v   	flycheck-verify-setup
+M-m e x   	flycheck-explain-error-at-point
+M-m e y   	flycheck-copy-errors-as-kill
+M-m e z   	spacemacs/last-error
+M-m n +   	spacemacs/evil-numbers-transient-state/evil-numbers/inc-at-pt
+M-m n -   	spacemacs/evil-numbers-transient-state/evil-numbers/dec-at-pt
+M-m n =   	spacemacs/evil-numbers-transient-state/evil-numbers/inc-at-pt
+M-m n F   	spacemacs/narrow-to-defun-indirect-buffer
+M-m n P   	spacemacs/narrow-to-page-indirect-buffer
+M-m n R   	spacemacs/narrow-to-region-indirect-buffer
+M-m n _   	spacemacs/evil-numbers-transient-state/evil-numbers/dec-at-pt
+M-m n f   	narrow-to-defun
+M-m n p   	narrow-to-page
+M-m n r   	narrow-to-region
+M-m n w   	widen
+M-m c C   	compile
+M-m c L   	spacemacs/comment-or-uncomment-lines-inverse
+M-m c N   	previous-error
+M-m c P   	spacemacs/comment-or-uncomment-paragraphs-inverse
+M-m c T   	spacemacs/quick-comment-or-uncomment-to-the-line-inverse
+M-m c Y   	spacemacs/copy-and-comment-lines-inverse
+M-m c b   	spacemacs/switch-to-compilation-buffer
+M-m c c   	helm-make-projectile
+M-m c d   	spacemacs/show-hide-compilation-window
+M-m c h   	hide/show-comments-toggle
+M-m c k   	kill-compilation
+M-m c l   	spacemacs/comment-or-uncomment-lines
+M-m c m   	helm-make
+M-m c n   	next-error
+M-m c p   	spacemacs/comment-or-uncomment-paragraphs
+M-m c r   	recompile
+M-m c t   	spacemacs/quick-comment-or-uncomment-to-the-line
+M-m c y   	spacemacs/copy-and-comment-lines
+M-m a '   	lazy-helm/helm-available-repls
+M-m a *   	calc-dispatch
+M-m a P   	proced
+M-m a d   	spacemacs/dired
+M-m a e .. M-m a f	Prefix Command
+M-m a k   	spacemacs/paradox-list-packages
+M-m a p   	list-processes
+M-m a u   	vundo
+M-m f A   	spacemacs/find-file-and-replace-buffer
+M-m f B   	treemacs-bookmark
+M-m f D   	spacemacs/delete-current-buffer-file-yes
+M-m f E   	spacemacs/sudo-edit
+M-m f F   	lazy-helm/helm-find-files
+M-m f J   	spacemacs/open-junk-file
+M-m f L   	lazy-helm/helm-locate
+M-m f R   	spacemacs/rename-current-buffer-file
+M-m f S   	evil-write-all
+M-m f T   	treemacs-find-file
+M-m f b   	helm-filtered-bookmarks
+M-m f c   	spacemacs/save-as
+M-m f d   	spacemacs/delete-current-buffer-file
+M-m f f   	lazy-helm/spacemacs/helm-find-files
+M-m f h   	hexl-find-file
+M-m f i   	spacemacs/insert-file
+M-m f j   	dired-jump
+M-m f l   	find-file-literally
+M-m f o   	spacemacs/open-file-or-directory-in-external-app
+M-m f r   	lazy-helm/helm-recentf
+M-m f s   	save-buffer
+M-m f t   	treemacs
+M-m j $   	spacemacs/push-mark-and-goto-end-of-line
+M-m j (   	check-parens
+M-m j +   	spacemacs/iwb-region-or-buffer
+M-m j 0   	spacemacs/push-mark-and-goto-beginning-of-line
+M-m j =   	spacemacs/indent-region-or-buffer
+M-m j D   	dired-jump-other-window
+M-m j I   	lazy-helm/helm-imenu-in-all-buffers
+M-m j S   	spacemacs/split-and-new-line
+M-m j U   	spacemacs/avy-open-url
+M-m j b   	avy-pop-mark
+M-m j c   	goto-last-change
+M-m j d   	dired-jump
+M-m j f   	find-function
+M-m j i   	spacemacs/helm-jump-in-buffer
+M-m j j   	evil-avy-goto-char-timer
+M-m j k   	spacemacs/evil-goto-next-line-and-indent
+M-m j l   	evil-avy-goto-line
+M-m j n   	sp-newline
+M-m j o   	open-line
+M-m j s   	sp-split-sexp
+M-m j u   	spacemacs/avy-goto-url
+M-m j v   	find-variable
+M-m j w   	evil-avy-goto-word-or-subword-1
+M-m i J   	spacemacs/insert-line-below-no-indent
+M-m i K   	spacemacs/insert-line-above-no-indent
+M-m i b   	insert-buffer
+M-m i j   	spacemacs/evil-insert-line-below
+M-m i k   	spacemacs/evil-insert-line-above
+M-m i s   	spacemacs/helm-yas
+M-m i u   	lazy-helm/helm-ucs
+M-m w TAB 	spacemacs/alternate-window
+M-m w +   	spacemacs/window-layout-toggle
+M-m w -   	split-window-below
+M-m w .   	spacemacs/window-transient-state/body
+M-m w /   	split-window-right
+M-m w 1   	spacemacs/window-split-single-column
+M-m w 2   	spacemacs/window-split-double-columns
+M-m w 3   	spacemacs/window-split-triple-columns
+M-m w 4   	spacemacs/window-split-grid
+M-m w =   	balance-windows-area
+M-m w D   	spacemacs/ace-delete-window
+M-m w F   	make-frame
+M-m w H   	evil-window-move-far-left
+M-m w J   	evil-window-move-very-bottom
+M-m w K   	evil-window-move-very-top
+M-m w L   	evil-window-move-far-right
+M-m w M   	ace-swap-window
+M-m w R   	spacemacs/rotate-windows-backward
+M-m w S   	split-window-below-and-focus
+M-m w V   	split-window-right-and-focus
+M-m w W   	ace-window
+M-m w [   	spacemacs/window-transient-state/spacemacs/shrink-window-horizontally
+M-m w ]   	spacemacs/window-transient-state/spacemacs/enlarge-window-horizontally
+M-m w _   	spacemacs/maximize-horizontally
+M-m w b   	spacemacs/switch-to-minibuffer-window
+M-m w d   	delete-window
+M-m w f   	follow-mode
+M-m w h   	evil-window-left
+M-m w j   	evil-window-down
+M-m w k   	evil-window-up
+M-m w l   	evil-window-right
+M-m w m   	spacemacs/toggle-maximize-window
+M-m w o   	other-frame
+M-m w r   	spacemacs/rotate-windows-forward
+M-m w s   	split-window-below
+M-m w t   	spacemacs/toggle-current-window-dedication
+M-m w u   	spacemacs/winner-transient-state/winner-undo
+M-m w v   	split-window-right
+M-m w w   	other-window
+M-m w x   	kill-buffer-and-window
+M-m w {   	spacemacs/window-transient-state/spacemacs/shrink-window
+M-m w |   	spacemacs/maximize-vertically
+M-m w }   	spacemacs/window-transient-state/spacemacs/enlarge-window
+M-m w S-<down>	evil-window-move-very-bottom
+M-m w S-<left>	evil-window-move-far-left
+M-m w S-<right>	evil-window-move-far-right
+M-m w S-<up>	evil-window-move-very-top
+M-m w <down>	evil-window-down
+M-m w <left>	evil-window-left
+M-m w <right>	evil-window-right
+M-m w <up>	evil-window-up
+M-m b C-d 	spacemacs/kill-other-buffers
+M-m b .   	spacemacs/buffer-transient-state/body
+M-m b 1   	buffer-to-window-1
+M-m b 2   	buffer-to-window-2
+M-m b 3   	buffer-to-window-3
+M-m b 4   	buffer-to-window-4
+M-m b 5   	buffer-to-window-5
+M-m b 6   	buffer-to-window-6
+M-m b 7   	buffer-to-window-7
+M-m b 8   	buffer-to-window-8
+M-m b 9   	buffer-to-window-9
+M-m b B   	spacemacs-layouts/non-restricted-buffer-list-helm
+M-m b D   	spacemacs/ace-kill-this-buffer
+M-m b H   	spacemacs/switch-to-help-buffer
+M-m b P   	spacemacs/copy-clipboard-to-whole-buffer
+M-m b R   	revert-buffer
+M-m b U   	lazy-helm/spacemacs/helm-buffers-list-unfiltered
+M-m b W   	spacemacs/goto-buffer-workspace
+M-m b Y   	spacemacs/copy-whole-buffer-to-clipboard
+M-m b a   	persp-add-buffer
+M-m b b   	lazy-helm/helm-mini
+M-m b d   	kill-current-buffer
+M-m b e   	spacemacs/safe-erase-buffer
+M-m b h   	spacemacs/home
+M-m b m   	spacemacs/switch-to-messages-buffer
+M-m b n   	next-buffer
+M-m b p   	previous-buffer
+M-m b r   	persp-remove-buffer
+M-m b s   	spacemacs/switch-to-scratch-buffer
+M-m b u   	spacemacs/reopen-killed-buffer
+M-m b w   	read-only-mode
+M-m b x   	kill-buffer-and-window
+M-m b C-S-d	spacemacs/kill-matching-buffers-rudely
+M-m x TAB 	indent-rigidly
+M-m x .   	spacemacs/drag-stuff-transient-state/body
+M-m x A   	link-hint-open-all-links
+M-m x J   	spacemacs/drag-stuff-transient-state/drag-stuff-down
+M-m x K   	spacemacs/drag-stuff-transient-state/drag-stuff-up
+M-m x O   	link-hint-open-link
+M-m x U   	upcase-region
+M-m x Y   	link-hint-copy-link
+M-m x c   	count-region
+M-m x e   	string-edit-at-point
+M-m x m   	link-hint-open-multiple-links
+M-m x n   	spacemacs/multi-line-transient-state/body
+M-m x o   	link-hint-open-link-at-point
+M-m x u   	downcase-region
+M-m x x   	spacemacs/quickrun
+M-m x y   	link-hint-copy-link-at-point
+M-m h RET 	helm-enable-minor-mode
+M-m h SPC 	helm-spacemacs-help
+M-m h .   	helm-spacemacs-help-dotspacemacs
+M-m h I   	lazy-helm/spacemacs/report-issue
+M-m h M   	helm-switch-major-mode
+M-m h f   	helm-spacemacs-help-faq
+M-m h i   	lazy-helm/helm-info-at-point
+M-m h j   	info-display-manual
+M-m h k   	which-key-show-top-level
+M-m h l   	helm-spacemacs-help-layers
+M-m h m   	lazy-helm/helm-man-woman
+M-m h n   	lazy-helm/view-emacs-news
+M-m h p   	helm-spacemacs-help-packages
+M-m h r   	helm-spacemacs-help-docs
+M-m h t   	helm-spacemacs-help-toggles
+M-m z .   	spacemacs/fold-transient-state/body
+M-m z f   	spacemacs/zoom-frm-transient-state/body
+M-m z x   	spacemacs/scale-font-transient-state/body
+M-m N <   	spacemacs/scroll-transient-state/evil-goto-first-line
+M-m N >   	spacemacs/scroll-transient-state/evil-goto-line
+M-m N G   	spacemacs/scroll-transient-state/evil-goto-line
+M-m N H   	spacemacs/scroll-transient-state/evil-scroll-left
+M-m N J   	spacemacs/scroll-transient-state/evil-scroll-down
+M-m N K   	spacemacs/scroll-transient-state/evil-scroll-up
+M-m N L   	spacemacs/scroll-transient-state/evil-scroll-right
+M-m N b   	spacemacs/scroll-transient-state/evil-scroll-page-up
+M-m N d   	spacemacs/scroll-transient-state/evil-scroll-down
+M-m N f   	spacemacs/scroll-transient-state/evil-scroll-page-down
+M-m N g   	spacemacs/scroll-transient-state/evil-goto-first-line
+M-m N h   	spacemacs/scroll-transient-state/evil-scroll-column-left
+M-m N j   	spacemacs/scroll-transient-state/evil-scroll-line-down
+M-m N k   	spacemacs/scroll-transient-state/evil-scroll-line-up
+M-m N l   	spacemacs/scroll-transient-state/evil-scroll-column-right
+M-m N u   	spacemacs/scroll-transient-state/evil-scroll-up
+M-m s C-s 	helm-multi-swoop-all
+M-m s B   	spacemacs/helm-buffers-smart-do-search-region-or-symbol
+M-m s C   	spacemacs/helm-swoop-clear-cache
+M-m s D   	spacemacs/helm-dir-smart-do-search-region-or-symbol
+M-m s F   	spacemacs/helm-files-smart-do-search-region-or-symbol
+M-m s H   	spacemacs/goto-last-searched-ahs-symbol
+M-m s O   	symbol-overlay-remove-all
+M-m s P   	spacemacs/helm-project-smart-do-search-region-or-symbol
+M-m s S   	helm-multi-swoop
+M-m s `   	helm-ag-pop-stack
+M-m s b   	spacemacs/helm-buffers-smart-do-search
+M-m s c   	spacemacs/evil-search-clear-highlight
+M-m s d   	spacemacs/helm-dir-smart-do-search
+M-m s e   	evil-iedit-state/iedit-mode
+M-m s f   	spacemacs/helm-files-smart-do-search
+M-m s h   	spacemacs/symbol-highlight
+M-m s j   	lazy-helm/spacemacs/helm-jump-in-buffer
+M-m s l   	lazy-helm/spacemacs/resume-last-search-buffer
+M-m s o   	spacemacs/symbol-overlay
+M-m s p   	spacemacs/helm-project-smart-do-search
+M-m s s   	helm-swoop
+M-m r B   	switch-buffer-without-purpose
+M-m r D   	purpose-delete-non-dedicated-windows
+M-m r P   	purpose-set-window-purpose
+M-m r b   	purpose-switch-buffer-with-purpose
+M-m r e   	evil-show-registers
+M-m r l   	lazy-helm/helm-resume
+M-m r m   	lazy-helm/helm-all-mark-rings
+M-m r p   	purpose-switch-buffer-with-some-purpose
+M-m r r   	lazy-helm/helm-register
+M-m r s   	lazy-helm/spacemacs/resume-last-search-buffer
+M-m r w   	spacemacs/last-popwin
+M-m r y   	lazy-helm/helm-show-kill-ring
+M-m t C-c 	spacemacs/toggle-camel-case-motion-globally
+M-m t C-f 	spacemacs/toggle-display-fill-column-indicator-globally
+M-m t TAB 	spacemacs/toggle-indent-guide-globally
+M-m t C-p 	spacemacs/toggle-smartparens-globally
+M-m t C-w 	spacemacs/toggle-whitespace-globally
+M-m t -   	spacemacs/toggle-centered-point
+M-m t 8   	spacemacs/toggle-highlight-long-lines
+M-m t D   	spacemacs/toggle-debug-on-error
+M-m t F   	spacemacs/toggle-auto-fill-mode
+M-m t I   	spacemacs/toggle-aggressive-indent
+M-m t K   	spacemacs/toggle-which-key
+M-m t L   	spacemacs/toggle-visual-line-navigation
+
+`cua--ena-cua-keys-keymap' Minor Mode Bindings:
+C-v       	yank
+M-v       	delete-selection-repeat-replace-region
+C-c <timeout>	copy-region-as-kill
+C-x <timeout>	kill-region
+
+`cua-mode' Minor Mode Bindings:
+C-a       	mark-whole-buffer
+C-f       	isearch-forward
+C-y       	undo-redo
+C-S-SPC   	cua-toggle-global-mark
+C-<return>	cua-set-rectangle-mark
+C-v       	cua-paste
+(Remapped via <remap> <clipboard-yank>)	cua-exchange-point-and-mark
+(Remapped via <remap> <exchange-point-and-mark>)	cua-scroll-down
+(Remapped via <remap> <scroll-down>)	cua-scroll-down
+(Remapped via <remap> <scroll-down-command>)	cua-scroll-up
+(Remapped via <remap> <scroll-up>)	cua-scroll-up
+(Remapped via <remap> <scroll-up-command>)	cua-set-mark
+(Remapped via <remap> <set-mark-command>)	cua-paste
+(Remapped via <remap> <x-clipboard-yank>)	cua-paste
+(Remapped via <remap> <yank>)	cua-paste-pop
+(Remapped via <remap> <yank-pop>)	treemacs-select-window
+(Remapped via <remap> <winum-select-window-0-or-10>)	winum-select-window-0-or-10
+M-1       	winum-select-window-1
+M-2       	winum-select-window-2
+M-3       	winum-select-window-3
+M-4       	winum-select-window-4
+M-5       	winum-select-window-5
+M-6       	winum-select-window-6
+M-7       	winum-select-window-7
+M-8       	winum-select-window-8
+M-9       	winum-select-window-9
+C-x w 0   	winum-select-window-0-or-10
+C-x w 1   	winum-select-window-1
+C-x w 2   	winum-select-window-2
+C-x w 3   	winum-select-window-3
+C-x w 4   	winum-select-window-4
+C-x w 5   	winum-select-window-5
+C-x w 6   	winum-select-window-6
+C-x w 7   	winum-select-window-7
+C-x w 8   	winum-select-window-8
+C-x w 9   	winum-select-window-9
+C-x w `   	winum-select-window-by-number
+C-x w ²   	winum-select-window-by-number
+
+`persp-mode' Minor Mode Bindings:
+C-c p C   	persp-kill
+C-c p I   	persp-import-win-conf
+C-c p K   	persp-kill-buffer
+C-c p L   	persp-load-from-file-by-names
+C-c p S   	persp-window-switch
+C-c p W   	persp-save-to-file-by-names
+C-c p X   	persp-remove-buffers-by-regexp
+C-c p a   	persp-add-buffer
+C-c p b   	persp-switch-to-buffer
+C-c p c   	persp-copy
+C-c p i   	persp-import-buffers
+C-c p k   	persp-remove-buffer
+C-c p l   	persp-load-state-from-file
+C-c p n   	persp-next
+C-c p o   	#<byte-code-function 79B>
+C-c p p   	persp-prev
+C-c p r   	persp-rename
+C-c p s   	persp-frame-switch
+C-c p t   	persp-temporarily-display-buffer
+C-c p w   	persp-save-state-to-file
+C-c p x   	persp-add-buffers-by-regexp
+C-c p z   	persp-save-and-kill
+
+`eyebrowse-mode' Minor Mode Bindings:
+C-c C-w C-c	eyebrowse-create-window-config
+C-c C-w " 	eyebrowse-close-window-config
+C-c C-w ' 	eyebrowse-last-window-config
+C-c C-w , 	eyebrowse-rename-window-config
+C-c C-w . 	eyebrowse-switch-to-window-config
+C-c C-w 0 	eyebrowse-switch-to-window-config-0
+C-c C-w 1 	eyebrowse-switch-to-window-config-1
+C-c C-w 2 	eyebrowse-switch-to-window-config-2
+C-c C-w 3 	eyebrowse-switch-to-window-config-3
+C-c C-w 4 	eyebrowse-switch-to-window-config-4
+C-c C-w 5 	eyebrowse-switch-to-window-config-5
+C-c C-w 6 	eyebrowse-switch-to-window-config-6
+C-c C-w 7 	eyebrowse-switch-to-window-config-7
+C-c C-w 8 	eyebrowse-switch-to-window-config-8
+C-c C-w 9 	eyebrowse-switch-to-window-config-9
+C-c C-w < 	eyebrowse-prev-window-config
+C-c C-w > 	eyebrowse-next-window-config
+C-c C-w c 	eyebrowse-create-window-config
+
+`clean-aindent-mode' Minor Mode Bindings:
+C-<backspace>	clean-aindent--bsunindent
+(Remapped via <remap> <backward-kill-word>)	centaur-tabs--tab-menu
+<tab-line> <mouse-4>	centaur-tabs-backward
+<tab-line> <mouse-5>	centaur-tabs-forward
+<tab-line> <wheel-down>	centaur-tabs-forward
+<tab-line> <wheel-up>	centaur-tabs-backward
+
+`spacemacs-leader-override-mode' Minor Mode Bindings:
+<override-state>	evilified
+M-m TAB   	spacemacs/alternate-buffer
+M-m SPC   	spacemacs/helm-M-x-fuzzy-matching
+M-m !     	shell-command
+M-m "     	terminal-here-launch
+M-m '     	spacemacs/default-pop-shell
+M-m *     	spacemacs/helm-project-smart-do-search-region-or-symbol
+M-m /     	spacemacs/helm-project-smart-do-search
+M-m 0     	winum-select-window-0-or-10
+M-m 1     	winum-select-window-1
+M-m 2     	winum-select-window-2
+M-m 3     	winum-select-window-3
+M-m 4     	winum-select-window-4
+M-m 5     	winum-select-window-5
+M-m 6     	winum-select-window-6
+M-m 7     	winum-select-window-7
+M-m 8     	winum-select-window-8
+M-m 9     	winum-select-window-9
+M-m ;     	evilnc-comment-operator
+M-m ?     	helm-descbinds
+M-m `     	winum-select-window-by-number
+M-m l     	spacemacs/layouts-transient-state/body
+M-m u     	universal-argument
+M-m v     	er/expand-region
+M-m ²     	winum-select-window-by-number
+M-m <f1>  	lazy-helm/helm-apropos
+<evilified-state> SPC TAB	spacemacs/alternate-buffer
+<evilified-state> SPC SPC	spacemacs/helm-M-x-fuzzy-matching
+<evilified-state> SPC !	shell-command
+<evilified-state> SPC "	terminal-here-launch
+<evilified-state> SPC '	spacemacs/default-pop-shell
+<evilified-state> SPC *	spacemacs/helm-project-smart-do-search-region-or-symbol
+<evilified-state> SPC /	spacemacs/helm-project-smart-do-search
+<evilified-state> SPC 0	winum-select-window-0-or-10
+<evilified-state> SPC 1	winum-select-window-1
+<evilified-state> SPC 2	winum-select-window-2
+<evilified-state> SPC 3	winum-select-window-3
+<evilified-state> SPC 4	winum-select-window-4
+<evilified-state> SPC 5	winum-select-window-5
+<evilified-state> SPC 6	winum-select-window-6
+<evilified-state> SPC 7	winum-select-window-7
+<evilified-state> SPC 8	winum-select-window-8
+<evilified-state> SPC 9	winum-select-window-9
+<evilified-state> SPC ;	evilnc-comment-operator
+<evilified-state> SPC ?	helm-descbinds
+<evilified-state> SPC `	winum-select-window-by-number
+<evilified-state> SPC l	spacemacs/layouts-transient-state/body
+<evilified-state> SPC u	universal-argument
+<evilified-state> SPC v	er/expand-region
+<evilified-state> SPC ²	winum-select-window-by-number
+<evilified-state> SPC <f1>	lazy-helm/helm-apropos
+<visual-state> SPC TAB	spacemacs/alternate-buffer
+<visual-state> SPC SPC	spacemacs/helm-M-x-fuzzy-matching
+<visual-state> SPC !	shell-command
+<visual-state> SPC "	terminal-here-launch
+<visual-state> SPC '	spacemacs/default-pop-shell
+<visual-state> SPC *	spacemacs/helm-project-smart-do-search-region-or-symbol
+<visual-state> SPC /	spacemacs/helm-project-smart-do-search
+<visual-state> SPC 0	winum-select-window-0-or-10
+<visual-state> SPC 1	winum-select-window-1
+<visual-state> SPC 2	winum-select-window-2
+<visual-state> SPC 3	winum-select-window-3
+<visual-state> SPC 4	winum-select-window-4
+<visual-state> SPC 5	winum-select-window-5
+<visual-state> SPC 6	winum-select-window-6
+<visual-state> SPC 7	winum-select-window-7
+<visual-state> SPC 8	winum-select-window-8
+<visual-state> SPC 9	winum-select-window-9
+<visual-state> SPC ;	evilnc-comment-operator
+<visual-state> SPC ?	helm-descbinds
+<visual-state> SPC `	winum-select-window-by-number
+<visual-state> SPC l	spacemacs/layouts-transient-state/body
+<visual-state> SPC u	universal-argument
+<visual-state> SPC v	er/expand-region
+<visual-state> SPC ²	winum-select-window-by-number
+<visual-state> SPC <f1>	lazy-helm/helm-apropos
+<motion-state> SPC TAB	spacemacs/alternate-buffer
+<motion-state> SPC SPC	spacemacs/helm-M-x-fuzzy-matching
+<motion-state> SPC !	shell-command
+<motion-state> SPC "	terminal-here-launch
+<motion-state> SPC '	spacemacs/default-pop-shell
+<motion-state> SPC *	spacemacs/helm-project-smart-do-search-region-or-symbol
+<motion-state> SPC /	spacemacs/helm-project-smart-do-search
+<motion-state> SPC 0	winum-select-window-0-or-10
+<motion-state> SPC 1	winum-select-window-1
+<motion-state> SPC 2	winum-select-window-2
+<motion-state> SPC 3	winum-select-window-3
+<motion-state> SPC 4	winum-select-window-4
+<motion-state> SPC 5	winum-select-window-5
+<motion-state> SPC 6	winum-select-window-6
+<motion-state> SPC 7	winum-select-window-7
+<motion-state> SPC 8	winum-select-window-8
+<motion-state> SPC 9	winum-select-window-9
+<motion-state> SPC ;	evilnc-comment-operator
+<motion-state> SPC ?	helm-descbinds
+<motion-state> SPC `	winum-select-window-by-number
+<motion-state> SPC l	spacemacs/layouts-transient-state/body
+<motion-state> SPC u	universal-argument
+<motion-state> SPC v	er/expand-region
+<motion-state> SPC ²	winum-select-window-by-number
+<motion-state> SPC <f1>	lazy-helm/helm-apropos
+<normal-state> SPC TAB	spacemacs/alternate-buffer
+<normal-state> SPC SPC	spacemacs/helm-M-x-fuzzy-matching
+<normal-state> SPC !	shell-command
+<normal-state> SPC "	terminal-here-launch
+<normal-state> SPC '	spacemacs/default-pop-shell
+<normal-state> SPC *	spacemacs/helm-project-smart-do-search-region-or-symbol
+<normal-state> SPC /	spacemacs/helm-project-smart-do-search
+<normal-state> SPC 0	winum-select-window-0-or-10
+<normal-state> SPC 1	winum-select-window-1
+<normal-state> SPC 2	winum-select-window-2
+<normal-state> SPC 3	winum-select-window-3
+<normal-state> SPC 4	winum-select-window-4
+<normal-state> SPC 5	winum-select-window-5
+<normal-state> SPC 6	winum-select-window-6
+<normal-state> SPC 7	winum-select-window-7
+<normal-state> SPC 8	winum-select-window-8
+<normal-state> SPC 9	winum-select-window-9
+<normal-state> SPC ;	evilnc-comment-operator
+<normal-state> SPC ?	helm-descbinds
+<normal-state> SPC `	winum-select-window-by-number
+<normal-state> SPC l	spacemacs/layouts-transient-state/body
+<normal-state> SPC u	universal-argument
+<normal-state> SPC v	er/expand-region
+<normal-state> SPC ²	winum-select-window-by-number
+<normal-state> SPC <f1>	lazy-helm/helm-apropos
+M-m F B   	spacemacs/display-buffer-other-frame
+M-m F D   	delete-other-frames
+M-m F O   	spacemacs/dired-other-frame
+M-m F b   	spacemacs/switch-to-buffer-other-frame
+M-m F d   	delete-frame
+M-m F f   	spacemacs/find-file-other-frame
+M-m F n   	make-frame
+M-m F o   	other-frame
+M-m D h   	ediff-documentation
+M-m D s   	ediff-show-registry
+M-m C-v N 	rectangle-number-lines
+M-m C-v c 	close-rectangle
+M-m C-v d 	delete-rectangle
+M-m C-v e 	rectangle-exchange-point-and-mark
+M-m C-v i 	copy-rectangle-to-register
+M-m C-v k 	kill-rectangle
+M-m C-v l 	rectangle-left-char
+M-m C-v m 	rectangle-mark-mode
+M-m C-v n 	rectangle-next-line
+M-m C-v o 	open-rectangle
+M-m C-v p 	rectangle-previous-line
+M-m C-v r 	rectangle-right-char
+M-m C-v s 	string-rectangle
+M-m C-v x 	clear-rectangle
+M-m C-v y 	yank-rectangle
+M-m K K   	kmacro-end-or-call-macro
+M-m K k   	kmacro-start-macro-or-insert-counter
+M-m K v   	kmacro-view-macro-repeat
+M-m p !   	projectile-run-shell-command-in-root
+M-m p "   	terminal-here-project-launch
+M-m p $   	spacemacs/projectile-shell
+M-m p %   	projectile-replace-regexp
+M-m p &   	projectile-run-async-shell-command-in-root
+M-m p '   	spacemacs/projectile-shell-pop
+M-m p D   	projectile-dired
+M-m p E   	projectile-find-references
+M-m p F   	helm-projectile-find-file-dwim
+M-m p I   	projectile-invalidate-cache
+M-m p R   	projectile-replace
+M-m p T   	projectile-test-project
+M-m p a   	projectile-toggle-between-implementation-and-test
+M-m p b   	helm-projectile-switch-to-buffer
+M-m p c   	projectile-compile-project
+M-m p d   	helm-projectile-find-dir
+M-m p e   	projectile-edit-dir-locals
+M-m p f   	helm-projectile-find-file
+M-m p h   	helm-projectile
+M-m p i   	projectile-install-project
+M-m p k   	projectile-kill-buffers
+M-m p l   	spacemacs/helm-persp-switch-project
+M-m p o   	spacemacs/org-project-capture-goto-todos
+M-m p p   	helm-projectile-switch-project
+M-m p r   	helm-projectile-recentf
+M-m p t   	spacemacs/treemacs-project-toggle
+M-m p u   	projectile-run-project
+M-m p v   	projectile-vc
+M-m T B   	spacemacs/scale-background-transparency-transient-state/spacemacs/toggle-background-transparency
+M-m T F   	spacemacs/toggle-fullscreen-frame
+M-m T M   	spacemacs/toggle-maximize-frame
+M-m T N   	spacemacs/theme-transient-state/spacemacs/cycle-spacemacs-theme-backward
+M-m T T   	spacemacs/scale-transparency-transient-state/body
+M-m T Z   	zone
+M-m T f   	spacemacs/toggle-fringe
+M-m T g   	spacemacs/toggle-gui-elements
+M-m T m   	spacemacs/toggle-menu-bar
+M-m T n   	spacemacs/theme-transient-state/spacemacs/cycle-spacemacs-theme
+M-m T s   	spacemacs/helm-themes
+M-m T t   	spacemacs/toggle-tool-bar
+M-m T ~   	spacemacs/toggle-vi-tilde-fringe
+M-m C c   	org-capture
+M-m C l   	lazy-helm/helm-colors
+M-m g *   	spacemacs/helm-git-grep-at-point
+M-m g /   	spacemacs/helm-git-grep
+M-m g L   	magit-list-repositories
+M-m g M   	git-messenger:popup-message
+M-m g S   	magit-stage-files
+M-m g U   	magit-unstage-files
+M-m g b   	spacemacs/git-blame-transient-state/body
+M-m g c   	magit-clone
+M-m g i   	magit-init
+M-m g m   	magit-dispatch
+M-m g s   	magit-status
+M-m g t   	spacemacs/time-machine-transient-state/body
+M-m S .   	spacemacs/spell-checking-transient-state/body
+M-m S b   	flyspell-buffer
+M-m S c   	flyspell-correct-wrapper
+M-m S d   	spell-checking/change-dictionary
+M-m S n   	flyspell-goto-next-error
+M-m S r   	flyspell-region
+M-m S s   	flyspell-correct-at-point
+M-m e .   	spacemacs/error-transient-state/body
+M-m e L   	spacemacs/goto-flycheck-error-list
+M-m e N   	spacemacs/previous-error
+M-m e S   	flycheck-set-checker-executable
+M-m e b   	flycheck-buffer
+M-m e c   	flycheck-clear
+M-m e d   	flycheck-disable-checker
+M-m e h   	flycheck-describe-checker
+M-m e l   	spacemacs/toggle-flycheck-error-list
+M-m e n   	spacemacs/next-error
+M-m e p   	spacemacs/previous-error
+M-m e s   	flycheck-select-checker
+M-m e v   	flycheck-verify-setup
+M-m e x   	flycheck-explain-error-at-point
+M-m e y   	flycheck-copy-errors-as-kill
+M-m e z   	spacemacs/last-error
+M-m n +   	spacemacs/evil-numbers-transient-state/evil-numbers/inc-at-pt
+M-m n -   	spacemacs/evil-numbers-transient-state/evil-numbers/dec-at-pt
+M-m n =   	spacemacs/evil-numbers-transient-state/evil-numbers/inc-at-pt
+M-m n F   	spacemacs/narrow-to-defun-indirect-buffer
+M-m n P   	spacemacs/narrow-to-page-indirect-buffer
+M-m n R   	spacemacs/narrow-to-region-indirect-buffer
+M-m n _   	spacemacs/evil-numbers-transient-state/evil-numbers/dec-at-pt
+M-m n f   	narrow-to-defun
+M-m n p   	narrow-to-page
+M-m n r   	narrow-to-region
+M-m n w   	widen
+M-m c C   	compile
+M-m c L   	spacemacs/comment-or-uncomment-lines-inverse
+M-m c N   	previous-error
+M-m c P   	spacemacs/comment-or-uncomment-paragraphs-inverse
+M-m c T   	spacemacs/quick-comment-or-uncomment-to-the-line-inverse
+M-m c Y   	spacemacs/copy-and-comment-lines-inverse
+M-m c b   	spacemacs/switch-to-compilation-buffer
+M-m c c   	helm-make-projectile
+M-m c d   	spacemacs/show-hide-compilation-window
+M-m c h   	hide/show-comments-toggle
+M-m c k   	kill-compilation
+M-m c l   	spacemacs/comment-or-uncomment-lines
+M-m c m   	helm-make
+M-m c n   	next-error
+M-m c p   	spacemacs/comment-or-uncomment-paragraphs
+M-m c r   	recompile
+M-m c t   	spacemacs/quick-comment-or-uncomment-to-the-line
+M-m c y   	spacemacs/copy-and-comment-lines
+M-m a '   	lazy-helm/helm-available-repls
+M-m a *   	calc-dispatch
+M-m a P   	proced
+M-m a d   	spacemacs/dired
+M-m a e .. M-m a f	Prefix Command
+M-m a k   	spacemacs/paradox-list-packages
+M-m a p   	list-processes
+M-m a u   	vundo
+M-m f A   	spacemacs/find-file-and-replace-buffer
+M-m f B   	treemacs-bookmark
+M-m f D   	spacemacs/delete-current-buffer-file-yes
+M-m f E   	spacemacs/sudo-edit
+M-m f F   	lazy-helm/helm-find-files
+M-m f J   	spacemacs/open-junk-file
+M-m f L   	lazy-helm/helm-locate
+M-m f R   	spacemacs/rename-current-buffer-file
+M-m f S   	evil-write-all
+M-m f T   	treemacs-find-file
+M-m f b   	helm-filtered-bookmarks
+M-m f c   	spacemacs/save-as
+M-m f d   	spacemacs/delete-current-buffer-file
+M-m f f   	lazy-helm/spacemacs/helm-find-files
+M-m f h   	hexl-find-file
+M-m f i   	spacemacs/insert-file
+M-m f j   	dired-jump
+M-m f l   	find-file-literally
+M-m f o   	spacemacs/open-file-or-directory-in-external-app
+M-m f r   	lazy-helm/helm-recentf
+M-m f s   	save-buffer
+M-m f t   	treemacs
+M-m j $   	spacemacs/push-mark-and-goto-end-of-line
+M-m j (   	check-parens
+M-m j +   	spacemacs/iwb-region-or-buffer
+M-m j 0   	spacemacs/push-mark-and-goto-beginning-of-line
+M-m j =   	spacemacs/indent-region-or-buffer
+M-m j D   	dired-jump-other-window
+M-m j I   	lazy-helm/helm-imenu-in-all-buffers
+M-m j S   	spacemacs/split-and-new-line
+M-m j U   	spacemacs/avy-open-url
+M-m j b   	avy-pop-mark
+M-m j c   	goto-last-change
+M-m j d   	dired-jump
+M-m j f   	find-function
+M-m j i   	spacemacs/helm-jump-in-buffer
+M-m j j   	evil-avy-goto-char-timer
+M-m j k   	spacemacs/evil-goto-next-line-and-indent
+M-m j l   	evil-avy-goto-line
+M-m j n   	sp-newline
+M-m j o   	open-line
+M-m j s   	sp-split-sexp
+M-m j u   	spacemacs/avy-goto-url
+M-m j v   	find-variable
+M-m j w   	evil-avy-goto-word-or-subword-1
+M-m i J   	spacemacs/insert-line-below-no-indent
+M-m i K   	spacemacs/insert-line-above-no-indent
+M-m i b   	insert-buffer
+M-m i j   	spacemacs/evil-insert-line-below
+M-m i k   	spacemacs/evil-insert-line-above
+M-m i s   	spacemacs/helm-yas
+M-m i u   	lazy-helm/helm-ucs
+M-m w TAB 	spacemacs/alternate-window
+M-m w +   	spacemacs/window-layout-toggle
+M-m w -   	split-window-below
+M-m w .   	spacemacs/window-transient-state/body
+M-m w /   	split-window-right
+M-m w 1   	spacemacs/window-split-single-column
+M-m w 2   	spacemacs/window-split-double-columns
+M-m w 3   	spacemacs/window-split-triple-columns
+M-m w 4   	spacemacs/window-split-grid
+M-m w =   	balance-windows-area
+M-m w D   	spacemacs/ace-delete-window
+M-m w F   	make-frame
+M-m w H   	evil-window-move-far-left
+M-m w J   	evil-window-move-very-bottom
+M-m w K   	evil-window-move-very-top
+M-m w L   	evil-window-move-far-right
+M-m w M   	ace-swap-window
+M-m w R   	spacemacs/rotate-windows-backward
+M-m w S   	split-window-below-and-focus
+M-m w V   	split-window-right-and-focus
+M-m w W   	ace-window
+M-m w [   	spacemacs/window-transient-state/spacemacs/shrink-window-horizontally
+M-m w ]   	spacemacs/window-transient-state/spacemacs/enlarge-window-horizontally
+M-m w _   	spacemacs/maximize-horizontally
+M-m w b   	spacemacs/switch-to-minibuffer-window
+M-m w d   	delete-window
+M-m w f   	follow-mode
+M-m w h   	evil-window-left
+M-m w j   	evil-window-down
+M-m w k   	evil-window-up
+M-m w l   	evil-window-right
+M-m w m   	spacemacs/toggle-maximize-window
+M-m w o   	other-frame
+M-m w r   	spacemacs/rotate-windows-forward
+M-m w s   	split-window-below
+M-m w t   	spacemacs/toggle-current-window-dedication
+M-m w u   	spacemacs/winner-transient-state/winner-undo
+M-m w v   	split-window-right
+M-m w w   	other-window
+M-m w x   	kill-buffer-and-window
+M-m w {   	spacemacs/window-transient-state/spacemacs/shrink-window
+M-m w |   	spacemacs/maximize-vertically
+M-m w }   	spacemacs/window-transient-state/spacemacs/enlarge-window
+M-m w S-<down>	evil-window-move-very-bottom
+M-m w S-<left>	evil-window-move-far-left
+M-m w S-<right>	evil-window-move-far-right
+M-m w S-<up>	evil-window-move-very-top
+M-m w <down>	evil-window-down
+M-m w <left>	evil-window-left
+M-m w <right>	evil-window-right
+M-m w <up>	evil-window-up
+M-m b C-d 	spacemacs/kill-other-buffers
+M-m b .   	spacemacs/buffer-transient-state/body
+M-m b 1   	buffer-to-window-1
+M-m b 2   	buffer-to-window-2
+M-m b 3   	buffer-to-window-3
+M-m b 4   	buffer-to-window-4
+M-m b 5   	buffer-to-window-5
+M-m b 6   	buffer-to-window-6
+M-m b 7   	buffer-to-window-7
+M-m b 8   	buffer-to-window-8
+M-m b 9   	buffer-to-window-9
+M-m b B   	spacemacs-layouts/non-restricted-buffer-list-helm
+M-m b D   	spacemacs/ace-kill-this-buffer
+M-m b H   	spacemacs/switch-to-help-buffer
+M-m b P   	spacemacs/copy-clipboard-to-whole-buffer
+M-m b R   	revert-buffer
+M-m b U   	lazy-helm/spacemacs/helm-buffers-list-unfiltered
+M-m b W   	spacemacs/goto-buffer-workspace
+M-m b Y   	spacemacs/copy-whole-buffer-to-clipboard
+M-m b a   	persp-add-buffer
+M-m b b   	lazy-helm/helm-mini
+M-m b d   	kill-current-buffer
+M-m b e   	spacemacs/safe-erase-buffer
+M-m b h   	spacemacs/home
+M-m b m   	spacemacs/switch-to-messages-buffer
+M-m b n   	next-buffer
+M-m b p   	previous-buffer
+M-m b r   	persp-remove-buffer
+M-m b s   	spacemacs/switch-to-scratch-buffer
+M-m b u   	spacemacs/reopen-killed-buffer
+M-m b w   	read-only-mode
+M-m b x   	kill-buffer-and-window
+M-m b C-S-d	spacemacs/kill-matching-buffers-rudely
+M-m x TAB 	indent-rigidly
+M-m x .   	spacemacs/drag-stuff-transient-state/body
+M-m x A   	link-hint-open-all-links
+M-m x J   	spacemacs/drag-stuff-transient-state/drag-stuff-down
+M-m x K   	spacemacs/drag-stuff-transient-state/drag-stuff-up
+M-m x O   	link-hint-open-link
+M-m x U   	upcase-region
+M-m x Y   	link-hint-copy-link
+M-m x c   	count-region
+M-m x e   	string-edit-at-point
+M-m x m   	link-hint-open-multiple-links
+M-m x n   	spacemacs/multi-line-transient-state/body
+M-m x o   	link-hint-open-link-at-point
+M-m x u   	downcase-region
+M-m x x   	spacemacs/quickrun
+M-m x y   	link-hint-copy-link-at-point
+M-m h RET 	helm-enable-minor-mode
+M-m h SPC 	helm-spacemacs-help
+M-m h .   	helm-spacemacs-help-dotspacemacs
+M-m h I   	lazy-helm/spacemacs/report-issue
+M-m h M   	helm-switch-major-mode
+M-m h f   	helm-spacemacs-help-faq
+M-m h i   	lazy-helm/helm-info-at-point
+M-m h j   	info-display-manual
+M-m h k   	which-key-show-top-level
+M-m h l   	helm-spacemacs-help-layers
+M-m h m   	lazy-helm/helm-man-woman
+M-m h n   	lazy-helm/view-emacs-news
+M-m h p   	helm-spacemacs-help-packages
+M-m h r   	helm-spacemacs-help-docs
+M-m h t   	helm-spacemacs-help-toggles
+M-m z .   	spacemacs/fold-transient-state/body
+M-m z f   	spacemacs/zoom-frm-transient-state/body
+M-m z x   	spacemacs/scale-font-transient-state/body
+M-m N <   	spacemacs/scroll-transient-state/evil-goto-first-line
+M-m N >   	spacemacs/scroll-transient-state/evil-goto-line
+M-m N G   	spacemacs/scroll-transient-state/evil-goto-line
+M-m N H   	spacemacs/scroll-transient-state/evil-scroll-left
+M-m N J   	spacemacs/scroll-transient-state/evil-scroll-down
+M-m N K   	spacemacs/scroll-transient-state/evil-scroll-up
+M-m N L   	spacemacs/scroll-transient-state/evil-scroll-right
+M-m N b   	spacemacs/scroll-transient-state/evil-scroll-page-up
+M-m N d   	spacemacs/scroll-transient-state/evil-scroll-down
+M-m N f   	spacemacs/scroll-transient-state/evil-scroll-page-down
+M-m N g   	spacemacs/scroll-transient-state/evil-goto-first-line
+M-m N h   	spacemacs/scroll-transient-state/evil-scroll-column-left
+M-m N j   	spacemacs/scroll-transient-state/evil-scroll-line-down
+M-m N k   	spacemacs/scroll-transient-state/evil-scroll-line-up
+M-m N l   	spacemacs/scroll-transient-state/evil-scroll-column-right
+M-m N u   	spacemacs/scroll-transient-state/evil-scroll-up
+M-m s C-s 	helm-multi-swoop-all
+M-m s B   	spacemacs/helm-buffers-smart-do-search-region-or-symbol
+M-m s C   	spacemacs/helm-swoop-clear-cache
+M-m s D   	spacemacs/helm-dir-smart-do-search-region-or-symbol
+M-m s F   	spacemacs/helm-files-smart-do-search-region-or-symbol
+M-m s H   	spacemacs/goto-last-searched-ahs-symbol
+M-m s O   	symbol-overlay-remove-all
+M-m s P   	spacemacs/helm-project-smart-do-search-region-or-symbol
+M-m s S   	helm-multi-swoop
+M-m s `   	helm-ag-pop-stack
+M-m s b   	spacemacs/helm-buffers-smart-do-search
+M-m s c   	spacemacs/evil-search-clear-highlight
+M-m s d   	spacemacs/helm-dir-smart-do-search
+M-m s e   	evil-iedit-state/iedit-mode
+M-m s f   	spacemacs/helm-files-smart-do-search
+M-m s h   	spacemacs/symbol-highlight
+M-m s j   	lazy-helm/spacemacs/helm-jump-in-buffer
+M-m s l   	lazy-helm/spacemacs/resume-last-search-buffer
+M-m s o   	spacemacs/symbol-overlay
+M-m s p   	spacemacs/helm-project-smart-do-search
+M-m s s   	helm-swoop
+M-m r B   	switch-buffer-without-purpose
+M-m r D   	purpose-delete-non-dedicated-windows
+M-m r P   	purpose-set-window-purpose
+M-m r b   	purpose-switch-buffer-with-purpose
+M-m r e   	evil-show-registers
+M-m r l   	lazy-helm/helm-resume
+M-m r m   	lazy-helm/helm-all-mark-rings
+M-m r p   	purpose-switch-buffer-with-some-purpose
+M-m r r   	lazy-helm/helm-register
+M-m r s   	lazy-helm/spacemacs/resume-last-search-buffer
+M-m r w   	spacemacs/last-popwin
+M-m r y   	lazy-helm/helm-show-kill-ring
+M-m t C-c 	spacemacs/toggle-camel-case-motion-globally
+M-m t C-f 	spacemacs/toggle-display-fill-column-indicator-globally
+M-m t TAB 	spacemacs/toggle-indent-guide-globally
+M-m t C-p 	spacemacs/toggle-smartparens-globally
+M-m t C-w 	spacemacs/toggle-whitespace-globally
+M-m t -   	spacemacs/toggle-centered-point
+M-m t 8   	spacemacs/toggle-highlight-long-lines
+M-m t D   	spacemacs/toggle-debug-on-error
+M-m t F   	spacemacs/toggle-auto-fill-mode
+M-m t I   	spacemacs/toggle-aggressive-indent
+M-m t K   	spacemacs/toggle-which-key
+M-m t L   	spacemacs/toggle-visual-line-navigation
+
+Global Bindings:
+C-@       	set-mark-command
+C-a       	mwim-beginning-of-code-or-line
+C-b       	backward-char
+C-d       	delete-char
+C-e       	mwim-end-of-line-or-code
+C-f       	forward-char
+C-g       	keyboard-quit
+C-j       	electric-newline-and-maybe-indent
+C-k       	kill-line
+C-l       	recenter-top-bottom
+C-n       	next-line
+C-o       	open-line
+C-p       	previous-line
+C-q       	quoted-insert
+C-s       	isearch-forward
+C-t       	transpose-chars
+C-u       	universal-argument
+C-w       	spacemacs/backward-kill-word-or-region
+C-y       	yank
+C-\       	toggle-input-method
+C-]       	abort-recursive-edit
+C-_       	undo
+DEL       	delete-backward-char
+C-SPC     	set-mark-command
+C--       	negative-argument
+C-/       	undo
+C-0 .. C-9	digit-argument
+C-?       	undo-redo
+C-M-<backspace>	backward-kill-sexp
+C-M-<delete>	backward-kill-sexp
+C-M-<down>	down-list
+C-M-<down-mouse-1>	mouse-drag-region-rectangle
+C-M-<drag-mouse-1>	ignore
+C-M-<end> 	end-of-defun
+C-M-<home>	beginning-of-defun
+C-M-<left>	backward-sexp
+C-M-<mouse-1>	mouse-set-point
+C-M-<mouse-4>	mouse-wheel-global-text-scale
+C-M-<mouse-5>	mouse-wheel-global-text-scale
+C-M-<right>	forward-sexp
+C-M-<up>  	backward-up-list
+C-M-<wheel-down>	mouse-wheel-global-text-scale
+C-M-<wheel-up>	mouse-wheel-global-text-scale
+C-S-<backspace>	kill-whole-line
+C-<backspace>	backward-kill-word
+C-<delete>	kill-word
+C-<down>  	forward-paragraph
+C-<down-mouse-1>	mouse-buffer-menu
+C-<drag-n-drop>	w32-drag-n-drop-other-frame
+C-<end>   	end-of-buffer
+C-<f10>   	buffer-menu-open
+C-<home>  	beginning-of-buffer
+C-<insert>	kill-ring-save
+C-<insertchar>	kill-ring-save
+C-<left>  	left-word
+C-<mouse-4>	mouse-wheel-text-scale
+C-<mouse-5>	mouse-wheel-text-scale
+C-<next>  	scroll-left
+C-<noname>	ignore
+C-<prior> 	scroll-right
+C-<right> 	right-word
+C-<up>    	backward-paragraph
+C-<wheel-down>	spacemacs/zoom-frm-out
+C-<wheel-up>	spacemacs/zoom-frm-in
+M-<begin> 	beginning-of-buffer-other-window
+M-<down-mouse-1>	mouse-drag-secondary
+M-<drag-mouse-1>	mouse-set-secondary
+M-<end>   	end-of-buffer-other-window
+M-<f10>   	toggle-frame-maximized
+M-<home>  	beginning-of-buffer-other-window
+M-<left>  	left-word
+M-<mouse-1>	mouse-start-secondary
+M-<mouse-2>	mouse-yank-secondary
+M-<mouse-3>	mouse-secondary-save-then-kill
+M-<mouse-4>	mwheel-scroll
+M-<mouse-5>	mwheel-scroll
+M-<mouse-6>	mwheel-scroll
+M-<mouse-7>	mwheel-scroll
+M-<next>  	scroll-other-window
+M-<noname>	ignore
+M-<prior> 	scroll-other-window-down
+M-<right> 	right-word
+M-<wheel-down>	mwheel-scroll
+M-<wheel-left>	mwheel-scroll
+M-<wheel-right>	mwheel-scroll
+M-<wheel-up>	mwheel-scroll
+S-<delete>	kill-region
+S-<down-mouse-1>	mouse-appearance-menu
+S-<f10>   	context-menu-open
+S-<insert>	yank
+S-<insertchar>	yank
+S-<mouse-3>	kmacro-end-and-call-macro
+S-<mouse-4>	mwheel-scroll
+S-<mouse-5>	mwheel-scroll
+S-<mouse-6>	mwheel-scroll
+S-<mouse-7>	mwheel-scroll
+S-<wheel-down>	mwheel-scroll
+S-<wheel-left>	mwheel-scroll
+S-<wheel-right>	mwheel-scroll
+S-<wheel-up>	mwheel-scroll
+<XF86Back>	previous-buffer
+<XF86Forward>	next-buffer
+<again>   	repeat-complex-command
+<begin>   	beginning-of-buffer
+<compose-last-chars>	compose-last-chars
+<copy>    	clipboard-kill-ring-save
+<cut>     	clipboard-kill-region
+<deletechar>	delete-forward-char
+<deleteline>	kill-line
+<delete-frame>	handle-delete-frame
+<down>    	next-line
+<drag-n-drop>	w32-drag-n-drop
+<end>     	move-end-of-line
+<execute> 	execute-extended-command
+<f3>      	kmacro-start-macro-or-insert-counter
+<f4>      	kmacro-end-or-call-macro
+<f10>     	menu-bar-open
+<f11>     	toggle-frame-fullscreen
+<f16>     	clipboard-kill-ring-save
+<f18>     	clipboard-yank
+<f20>     	clipboard-kill-region
+<find>    	search-forward
+<home>    	move-beginning-of-line
+<iconify-frame>	ignore
+<insert>  	overwrite-mode
+<insertchar>	overwrite-mode
+<insertline>	open-line
+<language-change>	ignore
+<left>    	left-char
+<lwindow> 	ignore
+<make-frame-visible>	ignore
+<menu>    	execute-extended-command
+<mouse-4> 	mwheel-scroll
+<mouse-5> 	mwheel-scroll
+<mouse-6> 	mwheel-scroll
+<mouse-7> 	mwheel-scroll
+<mouse-movement>	ignore-preserving-kill-region
+<next>    	scroll-up-command
+<noname>  	ignore
+<open>    	find-file
+<paste>   	clipboard-yank
+<pinch>   	text-scale-pinch
+<prior>   	scroll-down-command
+<redo>    	repeat-complex-command
+<right>   	right-char
+<rwindow> 	ignore
+<scroll>  	scroll-lock-mode
+<select-window>	handle-select-window
+<switch-frame>	handle-switch-frame
+<text-conversion>	analyze-text-conversion
+<touchscreen-drag>	touch-screen-drag
+<touchscreen-hold>	touch-screen-hold
+<touchscreen-pinch>	touch-screen-pinch
+<touchscreen-restart-drag>	touch-screen-restart-drag
+<touchscreen-scroll>	touch-screen-scroll
+<touch-end>	ignore
+<undo>    	undo
+<up>      	previous-line
+<wheel-down>	mwheel-scroll
+<wheel-left>	mwheel-scroll
+<wheel-right>	mwheel-scroll
+<wheel-up>	mwheel-scroll
+C-c a     	org-agenda
+C-c c     	org-capture
+C-c l     	org-store-link
+C-c r     	my-settings-query-replace
+C-h C-a   	about-emacs
+C-h C-c   	describe-copying
+C-h C-d   	view-emacs-debugging
+C-h C-e   	view-external-packages
+C-h C-f   	view-emacs-FAQ
+C-h RET   	view-order-manuals
+C-h C-n   	view-emacs-news
+C-h C-o   	describe-distribution
+C-h C-p   	view-emacs-problems
+C-h C-q   	help-quick-toggle
+C-h C-s   	search-forward-help-for-help
+C-h C-t   	view-emacs-todo
+C-h C-w   	describe-no-warranty
+C-h C-\   	describe-input-method
+C-h .     	display-local-help
+C-h ?     	help-for-help
+C-h C     	describe-coding-system
+C-h F     	Info-goto-emacs-command-node
+C-h I     	describe-input-method
+C-h K     	Info-goto-emacs-key-command-node
+C-h L     	describe-language-environment
+C-h P     	describe-package
+C-h R     	info-display-manual
+C-h S     	info-lookup-symbol
+C-h a     	apropos-command
+C-h b     	describe-bindings
+C-h c     	describe-key-briefly
+C-h d     	apropos-documentation
+C-h e     	view-echo-area-messages
+C-h f     	describe-function
+C-h g     	describe-gnu-project
+C-h h     	view-hello-file
+C-h i     	info
+C-h k     	describe-key
+C-h l     	view-lossage
+C-h m     	describe-mode
+C-h n     	view-emacs-news
+C-h o     	describe-symbol
+C-h p     	finder-by-keyword
+C-h q     	help-quit
+C-h r     	info-emacs-manual
+C-h s     	describe-syntax
+C-h t     	help-with-tutorial
+C-h u     	apropos-user-option
+C-h v     	describe-variable
+C-h w     	where-is
+C-h x     	describe-command
+C-h <f1>  	help-for-help
+C-h <help>	help-for-help
+C-x C-@   	pop-global-mark
+C-x C-b   	list-buffers
+C-x C-c   	save-buffers-kill-terminal
+C-x C-d   	list-directory
+C-x C-e   	eval-last-sexp
+C-x C-f   	spacemacs/helm-find-files
+C-x TAB   	indent-rigidly
+C-x C-j   	dired-jump
+C-x C-l   	downcase-region
+C-x C-n   	set-goal-column
+C-x C-o   	delete-blank-lines
+C-x C-p   	mark-page
+C-x C-q   	read-only-mode
+C-x C-r   	find-file-read-only
+C-x C-s   	save-buffer
+C-x C-t   	transpose-lines
+C-x C-u   	upcase-region
+C-x C-v   	find-alternate-file
+C-x C-w   	write-file
+C-x C-x   	exchange-point-and-mark
+C-x C-z   	suspend-frame
+C-x SPC   	rectangle-mark-mode
+C-x $     	set-selective-display
+C-x '     	expand-abbrev
+C-x (     	kmacro-start-macro
+C-x )     	kmacro-end-macro
+C-x *     	calc-dispatch
+C-x +     	balance-windows
+C-x -     	shrink-window-if-larger-than-buffer
+C-x .     	set-fill-prefix
+C-x 0     	delete-window
+C-x 1     	spacemacs/toggle-maximize-window
+C-x 2     	split-window-below
+C-x 3     	split-window-right
+C-x ;     	comment-set-column
+C-x <     	scroll-left
+C-x =     	what-cursor-position
+C-x >     	scroll-right
+C-x O     	other-window-backward
+C-x [     	backward-page
+C-x \     	activate-transient-input-method
+C-x ]     	forward-page
+C-x ^     	enlarge-window
+C-x `     	next-error
+C-x b     	helm-buffers-list
+C-x d     	dired
+C-x e     	kmacro-end-and-call-macro
+C-x f     	set-fill-column
+C-x h     	mark-whole-buffer
+C-x i     	insert-file
+C-x k     	kill-buffer
+C-x l     	count-lines-page
+C-x m     	compose-mail
+C-x o     	other-window
+C-x q     	kbd-macro-query
+C-x s     	save-some-buffers
+C-x u     	undo
+C-x z     	repeat
+C-x {     	shrink-window-horizontally
+C-x }     	enlarge-window-horizontally
+C-x DEL   	backward-kill-sentence
+C-x C-SPC 	pop-global-mark
+C-x C-+   	text-scale-adjust
+C-x C--   	text-scale-adjust
+C-x C-0   	text-scale-adjust
+C-x C-;   	comment-line
+C-x C-=   	text-scale-adjust
+C-x C-<left>	previous-buffer
+C-x C-<right>	next-buffer
+C-x <left>	previous-buffer
+C-x <right>	next-buffer
+C-M-@     	mark-sexp
+C-M-a     	beginning-of-defun
+C-M-b     	backward-sexp
+C-M-c     	exit-recursive-edit
+C-M-d     	down-list
+C-M-e     	end-of-defun
+C-M-f     	forward-sexp
+C-M-h     	mark-defun
+C-M-i     	complete-symbol
+C-M-j     	default-indent-new-line
+C-M-k     	kill-sexp
+C-M-l     	reposition-window
+C-M-n     	forward-list
+C-M-o     	split-line
+C-M-p     	backward-list
+C-M-r     	isearch-backward-regexp
+C-M-s     	isearch-forward-regexp
+C-M-t     	transpose-sexps
+C-M-u     	backward-up-list
+C-M-v     	scroll-other-window
+C-M-w     	append-next-kill
+C-M-\     	indent-region
+C-M-_     	undo-redo
+M-SPC     	cycle-spacing
+M-!       	shell-command
+M-$       	ispell-word
+M-%       	query-replace
+M-&       	async-shell-command
+M-'       	abbrev-prefix-mark
+M-(       	insert-parentheses
+M-)       	move-past-close-and-reindent
+M-,       	xref-go-back
+M--       	negative-argument
+M-.       	xref-find-definitions
+M-/       	hippie-expand
+M-:       	eval-expression
+M-;       	comment-dwim
+M-<       	beginning-of-buffer
+M-=       	count-words-region
+M->       	end-of-buffer
+M-?       	xref-find-references
+M-@       	mark-word
+M-X       	execute-extended-command-for-buffer
+M-\       	delete-horizontal-space
+M-^       	delete-indentation
+M-`       	tmm-menubar
+M-a       	backward-sentence
+M-b       	backward-word
+M-c       	capitalize-word
+M-d       	kill-word
+M-e       	forward-sentence
+M-f       	forward-word
+M-h       	mark-paragraph
+M-i       	tab-to-tab-stop
+M-j       	default-indent-new-line
+M-k       	kill-sentence
+M-l       	downcase-word
+M-q       	fill-paragraph
+M-r       	move-to-window-line-top-bottom
+M-t       	transpose-words
+M-u       	upcase-word
+M-w       	kill-ring-save
+M-x       	spacemacs/helm-M-x-fuzzy-matching
+M-y       	yank-pop
+M-z       	zap-to-char
+M-{       	backward-paragraph
+M-|       	shell-command-on-region
+M-}       	forward-paragraph
+M-~       	not-modified
+M-DEL     	backward-kill-word
+C-M-S-l   	recenter-other-window
+C-M-S-v   	scroll-other-window-down
+C-M-SPC   	mark-sexp
+C-M-%     	query-replace-regexp
+C-M-,     	xref-go-forward
+C-M--     	negative-argument
+C-M-.     	xref-find-apropos
+C-M-/     	dabbrev-completion
+C-M-0 .. C-M-9	digit-argument
+ESC C-<backspace>	backward-kill-sexp
+ESC C-<delete>	backward-kill-sexp
+ESC C-<down>	down-list
+ESC C-<end>	end-of-defun
+ESC C-<home>	beginning-of-defun
+ESC C-<left>	backward-sexp
+ESC C-<right>	forward-sexp
+ESC C-<up>	backward-up-list
+ESC <begin>	beginning-of-buffer-other-window
+ESC <end> 	end-of-buffer-other-window
+ESC <f10> 	toggle-frame-maximized
+ESC <home>	beginning-of-buffer-other-window
+ESC <left>	backward-word
+ESC <next>	scroll-other-window
+ESC <prior>	scroll-other-window-down
+ESC <right>	forward-word
+M-s .     	isearch-forward-symbol-at-point
+M-s _     	isearch-forward-symbol
+M-s o     	occur
+M-s w     	isearch-forward-word
+M-g TAB   	move-to-column
+M-g c     	goto-char
+M-g g     	goto-line
+M-g i     	imenu
+M-g n     	next-error
+M-g p     	previous-error
+M-ESC ESC 	keyboard-escape-quit
+M-ESC :   	eval-expression
+M-q       	unfill-toggle
+(Remapped via <remap> <fill-paragraph>)	info-manual
+(Remapped via <remap> <info-emacs-manual>)	helm-purpose-switch-buffer-with-purpose
+(Remapped via <remap> <purpose-switch-buffer-with-purpose>)	helm-purpose-switch-buffer-with-some-purpose
+(Remapped via <remap> <purpose-switch-buffer-with-some-purpose>)	helm-purpose-mini-ignore-purpose
+(Remapped via <remap> <switch-buffer-without-purpose>)	mwheel-scroll
+<right-fringe> <mouse-5>	mwheel-scroll
+<right-fringe> <mouse-6>	mwheel-scroll
+<right-fringe> <mouse-7>	mwheel-scroll
+<right-fringe> <wheel-down>	mwheel-scroll
+<right-fringe> <wheel-left>	mwheel-scroll
+<right-fringe> <wheel-right>	mwheel-scroll
+<right-fringe> <wheel-up>	mwheel-scroll
+<left-fringe> <mouse-4>	mwheel-scroll
+<left-fringe> <mouse-5>	mwheel-scroll
+<left-fringe> <mouse-6>	mwheel-scroll
+<left-fringe> <mouse-7>	mwheel-scroll
+<left-fringe> <wheel-down>	mwheel-scroll
+<left-fringe> <wheel-left>	mwheel-scroll
+<left-fringe> <wheel-right>	mwheel-scroll
+<left-fringe> <wheel-up>	mwheel-scroll
+<right-margin> <mouse-4>	mwheel-scroll
+<right-margin> <mouse-5>	mwheel-scroll
+<right-margin> <mouse-6>	mwheel-scroll
+<right-margin> <mouse-7>	mwheel-scroll
+<right-margin> <wheel-down>	mwheel-scroll
+<right-margin> <wheel-left>	mwheel-scroll
+<right-margin> <wheel-right>	mwheel-scroll
+<right-margin> <wheel-up>	mwheel-scroll
+<left-margin> <mouse-4>	mwheel-scroll
+<left-margin> <mouse-5>	mwheel-scroll
+<left-margin> <mouse-6>	mwheel-scroll
+<left-margin> <mouse-7>	mwheel-scroll
+<left-margin> <wheel-down>	mwheel-scroll
+<left-margin> <wheel-left>	mwheel-scroll
+<left-margin> <wheel-right>	mwheel-scroll
+<left-margin> <wheel-up>	mwheel-scroll
+<bottom-left-corner> <down-mouse-1>	mouse-drag-bottom-left-corner
+<bottom-left-corner> <mouse-1>	ignore
+<bottom-edge> <down-mouse-1>	mouse-drag-bottom-edge
+<bottom-edge> <mouse-1>	ignore
+<bottom-right-corner> <down-mouse-1> mouse-drag-bottom-right-corner	 ignore
+<right-edge> <down-mouse-1>	mouse-drag-right-edge
+<right-edge> <mouse-1>	ignore
+<top-right-corner> <down-mouse-1>	mouse-drag-top-right-corner
+<top-right-corner> <mouse-1>	ignore
+<top-edge> <down-mouse-1>	mouse-drag-top-edge
+<top-edge> <mouse-1>	ignore
+<top-left-corner> <down-mouse-1> mouse-drag-top-left-corner	 ignore
+<left-edge> <down-mouse-1>	mouse-drag-left-edge
+<left-edge> <mouse-1>	ignore
+<bottom-divider> C-<mouse-2>	mouse-split-window-horizontally
+<bottom-divider> <down-mouse-1>	mouse-drag-mode-line
+<bottom-divider> <mouse-1>	ignore
+<right-divider> C-<mouse-2>	mouse-split-window-vertically
+<right-divider> <down-mouse-1>	mouse-drag-vertical-line
+<right-divider> <mouse-1>	ignore
+<vertical-line> C-<mouse-2>	mouse-split-window-vertically
+<vertical-line> <down-mouse-1>	mouse-drag-vertical-line
+<vertical-line> <mouse-1>	mouse-select-window
+<horizontal-scroll-bar> C-<mouse-2>	mouse-split-window-horizontally
+<horizontal-scroll-bar> <mouse-1>	scroll-bar-toolkit-horizontal-scroll
+<horizontal-scroll-bar> <mouse-4>	mwheel-scroll
+<horizontal-scroll-bar> <mouse-5>	mwheel-scroll
+<horizontal-scroll-bar> <mouse-6>	mwheel-scroll
+<horizontal-scroll-bar> <mouse-7>	mwheel-scroll
+<horizontal-scroll-bar> <wheel-down>	mwheel-scroll
+<horizontal-scroll-bar> <wheel-left>	mwheel-scroll
+<horizontal-scroll-bar> <wheel-right>	mwheel-scroll
+<horizontal-scroll-bar> <wheel-up>	mwheel-scroll
+<vertical-scroll-bar> C-<mouse-2>	mouse-split-window-vertically
+<vertical-scroll-bar> <mouse-1>	scroll-bar-toolkit-scroll
+<vertical-scroll-bar> <mouse-4>	mwheel-scroll
+<vertical-scroll-bar> <mouse-5>	mwheel-scroll
+<vertical-scroll-bar> <mouse-6>	mwheel-scroll
+<vertical-scroll-bar> <mouse-7>	mwheel-scroll
+<vertical-scroll-bar> <wheel-down>	mwheel-scroll
+<vertical-scroll-bar> <wheel-left>	mwheel-scroll
+<vertical-scroll-bar> <wheel-right>	mwheel-scroll
+<vertical-scroll-bar> <wheel-up>	mwheel-scroll
+<mode-line> C-<mouse-2>	mouse-split-window-horizontally
+<mode-line> <down-mouse-1>	mouse-drag-mode-line
+<mode-line> <mouse-1>	mouse-select-window
+<mode-line> <mouse-2>	mouse-delete-other-windows
+<mode-line> <mouse-3>	mouse-delete-window
+<mode-line> <mouse-4>	mwheel-scroll
+<mode-line> <mouse-5>	mwheel-scroll
+<mode-line> <mouse-6>	mwheel-scroll
+<mode-line> <mouse-7>	mwheel-scroll
+<mode-line> <wheel-down>	mwheel-scroll
+<mode-line> <wheel-left>	mwheel-scroll
+<mode-line> <wheel-right>	mwheel-scroll
+<mode-line> <wheel-up>	mwheel-scroll
+<tab-line> <down-mouse-1>	mouse-drag-tab-line
+<tab-line> <mouse-1>	mouse-select-window
+<header-line> <down-mouse-1>	mouse-drag-header-line
+<header-line> <mouse-1>	mouse-select-window
+<header-line> <mouse-4>	mwheel-scroll
+<header-line> <mouse-5>	mwheel-scroll
+<header-line> <mouse-6>	mwheel-scroll
+<header-line> <mouse-7>	mwheel-scroll
+<header-line> <wheel-down>	mwheel-scroll
+<header-line> <wheel-left>	mwheel-scroll
+<header-line> <wheel-right>	mwheel-scroll
+<header-line> <wheel-up>	mwheel-scroll
+<f1> C-a  	about-emacs
+<f1> C-c  	describe-copying
+
+Key translations:
+TAB       	spacemacs/translate-C-i
+A-SPC     	 	NO-BREAK SPACE
+A-!       	¡	INVERTED EXCLAMATION MARK
+A-$       	¤	CURRENCY SIGN
+A-+       	±	PLUS-MINUS SIGN
+A--       	­	SOFT HYPHEN
+A-<       	«	LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+A->       	»	RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+A-?       	¿	INVERTED QUESTION MARK
+A-C       	©	COPYRIGHT SIGN
+A-E       	€	EURO SIGN
+A-L       	£	POUND SIGN
+A-P       	¶	PILCROW SIGN
+A-R       	®	REGISTERED SIGN
+A-S       	§	SECTION SIGN
+A-T       	™	TRADE MARK SIGN
+A-Y       	¥	YEN SIGN
+A-[       	‘	LEFT SINGLE QUOTATION MARK
+A-]       	’	RIGHT SINGLE QUOTATION MARK
+A-c       	¢	CENT SIGN
+A-m       	μ	GREEK SMALL LETTER MU
+A-o       	°	DEGREE SIGN
+A-u       	μ	GREEK SMALL LETTER MU
+A-x       	×	MULTIPLICATION SIGN
+A-{       	“	LEFT DOUBLE QUOTATION MARK
+A-|       	¦	BROKEN BAR
+A-}       	”	RIGHT DOUBLE QUOTATION MARK
+<double-down-mouse-1>	mouse--down-1-maybe-follows-link
+<double-mouse-1>	mouse--click-1-maybe-follows-link
+<down-mouse-1>	mouse--down-1-maybe-follows-link
+<mouse-1> 	mouse--click-1-maybe-follows-link
+A-A E     	Æ	LATIN CAPITAL LETTER AE
+A-a <     	←	LEFTWARDS ARROW
+A-a =     	↔	LEFT RIGHT ARROW
+A-a >     	→	RIGHTWARDS ARROW
+A-a ^     	↑	UPWARDS ARROW
+A-a e     	æ	LATIN SMALL LETTER AE
+A-a v     	↓	DOWNWARDS ARROW
+A-N o     	№	NUMERO SIGN
+A-2 +     	‡	DOUBLE DAGGER
+S-<dead-tilde> SPC	~	TILDE
+S-<dead-tilde> =	≈	ALMOST EQUAL TO
+S-<dead-tilde> A	Ã	LATIN CAPITAL LETTER A WITH TILDE
+S-<dead-tilde> D	Ð	LATIN CAPITAL LETTER ETH
+S-<dead-tilde> N	Ñ	LATIN CAPITAL LETTER N WITH TILDE
+S-<dead-tilde> O	Õ	LATIN CAPITAL LETTER O WITH TILDE
+S-<dead-tilde> T	Þ	LATIN CAPITAL LETTER THORN
+S-<dead-tilde> a	ã	LATIN SMALL LETTER A WITH TILDE
+S-<dead-tilde> d	ð	LATIN SMALL LETTER ETH
+S-<dead-tilde> n	ñ	LATIN SMALL LETTER N WITH TILDE
+S-<dead-tilde> o	õ	LATIN SMALL LETTER O WITH TILDE
+S-<dead-tilde> t	þ	LATIN SMALL LETTER THORN
+S-<dead-tilde> ~	¬	NOT SIGN
+S-<dead-asciitilde> SPC	~	TILDE
+S-<dead-asciitilde> =	≈	ALMOST EQUAL TO
+S-<dead-asciitilde> A	Ã	LATIN CAPITAL LETTER A WITH TILDE
+S-<dead-asciitilde> D	Ð	LATIN CAPITAL LETTER ETH
+S-<dead-asciitilde> N	Ñ	LATIN CAPITAL LETTER N WITH TILDE
+S-<dead-asciitilde> O	Õ	LATIN CAPITAL LETTER O WITH TILDE
+S-<dead-asciitilde> T	Þ	LATIN CAPITAL LETTER THORN
+S-<dead-asciitilde> a	ã	LATIN SMALL LETTER A WITH TILDE
+S-<dead-asciitilde> d	ð	LATIN SMALL LETTER ETH
+S-<dead-asciitilde> n	ñ	LATIN SMALL LETTER N WITH TILDE
+S-<dead-asciitilde> o	õ	LATIN SMALL LETTER O WITH TILDE
+S-<dead-asciitilde> t	þ	LATIN SMALL LETTER THORN
+S-<dead-asciitilde> ~	¬	NOT SIGN
+<dead-tilde> SPC	~	TILDE
+<dead-tilde> =	≈	ALMOST EQUAL TO
+<dead-tilde> A	Ã	LATIN CAPITAL LETTER A WITH TILDE
+<dead-tilde> D	Ð	LATIN CAPITAL LETTER ETH
+<dead-tilde> N	Ñ	LATIN CAPITAL LETTER N WITH TILDE
+<dead-tilde> O	Õ	LATIN CAPITAL LETTER O WITH TILDE
+<dead-tilde> T	Þ	LATIN CAPITAL LETTER THORN
+<dead-tilde> a	ã	LATIN SMALL LETTER A WITH TILDE
+<dead-tilde> d	ð	LATIN SMALL LETTER ETH
+<dead-tilde> n	ñ	LATIN SMALL LETTER N WITH TILDE
+<dead-tilde> o	õ	LATIN SMALL LETTER O WITH TILDE
+<dead-tilde> t	þ	LATIN SMALL LETTER THORN
+<dead-tilde> ~	¬	NOT SIGN
+<dead-asciitilde> SPC	~	TILDE
+<dead-asciitilde> =	≈	ALMOST EQUAL TO
+<dead-asciitilde> A	Ã	LATIN CAPITAL LETTER A WITH TILDE
+<dead-asciitilde> D	Ð	LATIN CAPITAL LETTER ETH
+<dead-asciitilde> N	Ñ	LATIN CAPITAL LETTER N WITH TILDE
+<dead-asciitilde> O	Õ	LATIN CAPITAL LETTER O WITH TILDE
+<dead-asciitilde> T	Þ	LATIN CAPITAL LETTER THORN
+<dead-asciitilde> a	ã	LATIN SMALL LETTER A WITH TILDE
+<dead-asciitilde> d	ð	LATIN SMALL LETTER ETH
+<dead-asciitilde> n	ñ	LATIN SMALL LETTER N WITH TILDE
+<dead-asciitilde> o	õ	LATIN SMALL LETTER O WITH TILDE
+<dead-asciitilde> t	þ	LATIN SMALL LETTER THORN
+<dead-asciitilde> ~	¬	NOT SIGN
+<mute-asciitilde> SPC	~	TILDE
+<mute-asciitilde> =	≈	ALMOST EQUAL TO
+<mute-asciitilde> A	Ã	LATIN CAPITAL LETTER A WITH TILDE
+<mute-asciitilde> D	Ð	LATIN CAPITAL LETTER ETH
+<mute-asciitilde> N	Ñ	LATIN CAPITAL LETTER N WITH TILDE
+<mute-asciitilde> O	Õ	LATIN CAPITAL LETTER O WITH TILDE
+<mute-asciitilde> T	Þ	LATIN CAPITAL LETTER THORN
+<mute-asciitilde> a	ã	LATIN SMALL LETTER A WITH TILDE
+<mute-asciitilde> d	ð	LATIN SMALL LETTER ETH
+<mute-asciitilde> n	ñ	LATIN SMALL LETTER N WITH TILDE
+<mute-asciitilde> o	õ	LATIN SMALL LETTER O WITH TILDE
+<mute-asciitilde> t	þ	LATIN SMALL LETTER THORN
+<mute-asciitilde> ~	¬	NOT SIGN
+A-~ SPC   	~	TILDE
+A-~ =     	≈	ALMOST EQUAL TO
+A-~ A     	Ã	LATIN CAPITAL LETTER A WITH TILDE
+A-~ D     	Ð	LATIN CAPITAL LETTER ETH
+A-~ N     	Ñ	LATIN CAPITAL LETTER N WITH TILDE
+A-~ O     	Õ	LATIN CAPITAL LETTER O WITH TILDE
+A-~ T     	Þ	LATIN CAPITAL LETTER THORN
+A-~ a     	ã	LATIN SMALL LETTER A WITH TILDE
+A-~ d     	ð	LATIN SMALL LETTER ETH
+A-~ n     	ñ	LATIN SMALL LETTER N WITH TILDE
+A-~ o     	õ	LATIN SMALL LETTER O WITH TILDE
+A-~ t     	þ	LATIN SMALL LETTER THORN
+A-~ ~     	¬	NOT SIGN
+A-O E     	Œ	LATIN CAPITAL LIGATURE OE
+A-O e     	œ	LATIN SMALL LIGATURE OE
+S-<dead-grave> SPC	`	GRAVE ACCENT
+S-<dead-grave> A	À	LATIN CAPITAL LETTER A WITH GRAVE
+S-<dead-grave> E	È	LATIN CAPITAL LETTER E WITH GRAVE
+S-<dead-grave> I	Ì	LATIN CAPITAL LETTER I WITH GRAVE
+S-<dead-grave> O	Ò	LATIN CAPITAL LETTER O WITH GRAVE
+S-<dead-grave> U	Ù	LATIN CAPITAL LETTER U WITH GRAVE
+S-<dead-grave> a	à	LATIN SMALL LETTER A WITH GRAVE
+S-<dead-grave> e	è	LATIN SMALL LETTER E WITH GRAVE
+S-<dead-grave> i	ì	LATIN SMALL LETTER I WITH GRAVE
+S-<dead-grave> o	ò	LATIN SMALL LETTER O WITH GRAVE
+S-<dead-grave> u	ù	LATIN SMALL LETTER U WITH GRAVE
+<dead-grave> SPC	`	GRAVE ACCENT
+<dead-grave> A	À	LATIN CAPITAL LETTER A WITH GRAVE
+<dead-grave> E	È	LATIN CAPITAL LETTER E WITH GRAVE
+<dead-grave> I	Ì	LATIN CAPITAL LETTER I WITH GRAVE
+<dead-grave> O	Ò	LATIN CAPITAL LETTER O WITH GRAVE
+<dead-grave> U	Ù	LATIN CAPITAL LETTER U WITH GRAVE
+<dead-grave> a	à	LATIN SMALL LETTER A WITH GRAVE
+<dead-grave> e	è	LATIN SMALL LETTER E WITH GRAVE
+<dead-grave> i	ì	LATIN SMALL LETTER I WITH GRAVE
+<dead-grave> o	ò	LATIN SMALL LETTER O WITH GRAVE
+<dead-grave> u	ù	LATIN SMALL LETTER U WITH GRAVE
+<mute-grave> SPC	`	GRAVE ACCENT
+<mute-grave> A	À	LATIN CAPITAL LETTER A WITH GRAVE
+<mute-grave> E	È	LATIN CAPITAL LETTER E WITH GRAVE
+<mute-grave> I	Ì	LATIN CAPITAL LETTER I WITH GRAVE
+<mute-grave> O	Ò	LATIN CAPITAL LETTER O WITH GRAVE
+<mute-grave> U	Ù	LATIN CAPITAL LETTER U WITH GRAVE
+<mute-grave> a	à	LATIN SMALL LETTER A WITH GRAVE
+<mute-grave> e	è	LATIN SMALL LETTER E WITH GRAVE
+<mute-grave> i	ì	LATIN SMALL LETTER I WITH GRAVE
+<mute-grave> o	ò	LATIN SMALL LETTER O WITH GRAVE
+<mute-grave> u	ù	LATIN SMALL LETTER U WITH GRAVE
+A-` SPC   	`	GRAVE ACCENT
+A-` A     	À	LATIN CAPITAL LETTER A WITH GRAVE
+A-` E     	È	LATIN CAPITAL LETTER E WITH GRAVE
+A-` I     	Ì	LATIN CAPITAL LETTER I WITH GRAVE
+A-` O     	Ò	LATIN CAPITAL LETTER O WITH GRAVE
+A-` U     	Ù	LATIN CAPITAL LETTER U WITH GRAVE
+A-` a     	à	LATIN SMALL LETTER A WITH GRAVE
+A-` e     	è	LATIN SMALL LETTER E WITH GRAVE
+A-` i     	ì	LATIN SMALL LETTER I WITH GRAVE
+A-` o     	ò	LATIN SMALL LETTER O WITH GRAVE
+A-` u     	ù	LATIN SMALL LETTER U WITH GRAVE
+A-) A     	Ă	LATIN CAPITAL LETTER A WITH BREVE
+A-) E     	Ĕ	LATIN CAPITAL LETTER E WITH BREVE
+A-) G     	Ğ	LATIN CAPITAL LETTER G WITH BREVE
+A-) I     	Ĭ	LATIN CAPITAL LETTER I WITH BREVE
+A-) O     	Ŏ	LATIN CAPITAL LETTER O WITH BREVE
+A-) U     	Ŭ	LATIN CAPITAL LETTER U WITH BREVE
+A-) a     	ă	LATIN SMALL LETTER A WITH BREVE
+A-) e     	ĕ	LATIN SMALL LETTER E WITH BREVE
+A-) g     	ğ	LATIN SMALL LETTER G WITH BREVE
+A-) i     	ĭ	LATIN SMALL LETTER I WITH BREVE
+A-) o     	ŏ	LATIN SMALL LETTER O WITH BREVE
+A-) u     	ŭ	LATIN SMALL LETTER U WITH BREVE
+A-_ +     	₊	SUBSCRIPT PLUS SIGN
+A-_ -     	−	MINUS SIGN
+A-_ 0     	₀	SUBSCRIPT ZERO
+A-_ 1     	₁	SUBSCRIPT ONE
+A-_ 2     	₂	SUBSCRIPT TWO
+A-_ 3     	₃	SUBSCRIPT THREE
+A-_ 4     	₄	SUBSCRIPT FOUR
+A-_ 5     	₅	SUBSCRIPT FIVE
+A-_ 6     	₆	SUBSCRIPT SIX
+A-_ 7     	₇	SUBSCRIPT SEVEN
+A-_ 8     	₈	SUBSCRIPT EIGHT
+A-_ 9     	₉	SUBSCRIPT NINE
+A-_ <     	≤	LESS-THAN OR EQUAL TO
+A-_ >     	≥	GREATER-THAN OR EQUAL TO
+A-_ H     	‑	NON-BREAKING HYPHEN
+A-_ a     	ª	FEMININE ORDINAL INDICATOR
+A-_ f     	‒	FIGURE DASH
+A-_ h     	‐	HYPHEN
+A-_ m     	—	EM DASH
+A-_ n     	–	EN DASH
+A-_ o     	º	MASCULINE ORDINAL INDICATOR
+A-_ q     	―	HORIZONTAL BAR
+S-<dead-circumflex> SPC	^	CIRCUMFLEX ACCENT
+S-<dead-circumflex> +	⁺	SUPERSCRIPT PLUS SIGN
+S-<dead-circumflex> -	⁻	SUPERSCRIPT MINUS
+S-<dead-circumflex> 0	⁰	SUPERSCRIPT ZERO
+S-<dead-circumflex> 1	¹	SUPERSCRIPT ONE
+S-<dead-circumflex> 2	²	SUPERSCRIPT TWO
+S-<dead-circumflex> 3	³	SUPERSCRIPT THREE
+S-<dead-circumflex> 4	⁴	SUPERSCRIPT FOUR
+S-<dead-circumflex> 5	⁵	SUPERSCRIPT FIVE
+S-<dead-circumflex> 6	⁶	SUPERSCRIPT SIX
+S-<dead-circumflex> 7	⁷	SUPERSCRIPT SEVEN
+S-<dead-circumflex> 8	⁸	SUPERSCRIPT EIGHT
+S-<dead-circumflex> 9	⁹	SUPERSCRIPT NINE
+S-<dead-circumflex> A	Â	LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+S-<dead-circumflex> E	Ê	LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+S-<dead-circumflex> I	Î	LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+S-<dead-circumflex> O	Ô	LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+S-<dead-circumflex> U	Û	LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+S-<dead-circumflex> W	Ŵ	LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+S-<dead-circumflex> Y	Ŷ	LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
+S-<dead-circumflex> a	â	LATIN SMALL LETTER A WITH CIRCUMFLEX
+S-<dead-circumflex> e	ê	LATIN SMALL LETTER E WITH CIRCUMFLEX
+S-<dead-circumflex> i	î	LATIN SMALL LETTER I WITH CIRCUMFLEX
+S-<dead-circumflex> o	ô	LATIN SMALL LETTER O WITH CIRCUMFLEX
+S-<dead-circumflex> u	û	LATIN SMALL LETTER U WITH CIRCUMFLEX
+S-<dead-circumflex> w	ŵ	LATIN SMALL LETTER W WITH CIRCUMFLEX
+S-<dead-circumflex> y	ŷ	LATIN SMALL LETTER Y WITH CIRCUMFLEX
+S-<dead-circum> SPC	^	CIRCUMFLEX ACCENT
+S-<dead-circum> +	⁺	SUPERSCRIPT PLUS SIGN
+S-<dead-circum> -	⁻	SUPERSCRIPT MINUS
+S-<dead-circum> 0	⁰	SUPERSCRIPT ZERO
+S-<dead-circum> 1	¹	SUPERSCRIPT ONE
+S-<dead-circum> 2	²	SUPERSCRIPT TWO
+S-<dead-circum> 3	³	SUPERSCRIPT THREE
+S-<dead-circum> 4	⁴	SUPERSCRIPT FOUR
+S-<dead-circum> 5	⁵	SUPERSCRIPT FIVE
+S-<dead-circum> 6	⁶	SUPERSCRIPT SIX
+S-<dead-circum> 7	⁷	SUPERSCRIPT SEVEN
+S-<dead-circum> 8	⁸	SUPERSCRIPT EIGHT
+S-<dead-circum> 9	⁹	SUPERSCRIPT NINE
+S-<dead-circum> A	Â	LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+S-<dead-circum> E	Ê	LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+S-<dead-circum> I	Î	LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+S-<dead-circum> O	Ô	LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+S-<dead-circum> U	Û	LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+S-<dead-circum> W	Ŵ	LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+S-<dead-circum> Y	Ŷ	LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
+S-<dead-circum> a	â	LATIN SMALL LETTER A WITH CIRCUMFLEX
+S-<dead-circum> e	ê	LATIN SMALL LETTER E WITH CIRCUMFLEX
+S-<dead-circum> i	î	LATIN SMALL LETTER I WITH CIRCUMFLEX
+S-<dead-circum> o	ô	LATIN SMALL LETTER O WITH CIRCUMFLEX
+S-<dead-circum> u	û	LATIN SMALL LETTER U WITH CIRCUMFLEX
+S-<dead-circum> w	ŵ	LATIN SMALL LETTER W WITH CIRCUMFLEX
+S-<dead-circum> y	ŷ	LATIN SMALL LETTER Y WITH CIRCUMFLEX
+S-<dead-asciicircum> SPC	^	CIRCUMFLEX ACCENT
+S-<dead-asciicircum> +	⁺	SUPERSCRIPT PLUS SIGN
+S-<dead-asciicircum> -	⁻	SUPERSCRIPT MINUS
+S-<dead-asciicircum> 0	⁰	SUPERSCRIPT ZERO
+S-<dead-asciicircum> 1	¹	SUPERSCRIPT ONE
+S-<dead-asciicircum> 2	²	SUPERSCRIPT TWO
+S-<dead-asciicircum> 3	³	SUPERSCRIPT THREE
+S-<dead-asciicircum> 4	⁴	SUPERSCRIPT FOUR
+S-<dead-asciicircum> 5	⁵	SUPERSCRIPT FIVE
+S-<dead-asciicircum> 6	⁶	SUPERSCRIPT SIX
+S-<dead-asciicircum> 7	⁷	SUPERSCRIPT SEVEN
+S-<dead-asciicircum> 8	⁸	SUPERSCRIPT EIGHT
+S-<dead-asciicircum> 9	⁹	SUPERSCRIPT NINE
+S-<dead-asciicircum> A	Â	LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+S-<dead-asciicircum> E	Ê	LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+S-<dead-asciicircum> I	Î	LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+S-<dead-asciicircum> O	Ô	LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+S-<dead-asciicircum> U	Û	LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+S-<dead-asciicircum> W	Ŵ	LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+S-<dead-asciicircum> Y	Ŷ	LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
+S-<dead-asciicircum> a	â	LATIN SMALL LETTER A WITH CIRCUMFLEX
+S-<dead-asciicircum> e	ê	LATIN SMALL LETTER E WITH CIRCUMFLEX
+S-<dead-asciicircum> i	î	LATIN SMALL LETTER I WITH CIRCUMFLEX
+S-<dead-asciicircum> o	ô	LATIN SMALL LETTER O WITH CIRCUMFLEX
+S-<dead-asciicircum> u	û	LATIN SMALL LETTER U WITH CIRCUMFLEX
+S-<dead-asciicircum> w	ŵ	LATIN SMALL LETTER W WITH CIRCUMFLEX
+S-<dead-asciicircum> y	ŷ	LATIN SMALL LETTER Y WITH CIRCUMFLEX
+<dead-circumflex> SPC	^	CIRCUMFLEX ACCENT
+<dead-circumflex> +	⁺	SUPERSCRIPT PLUS SIGN
+<dead-circumflex> -	⁻	SUPERSCRIPT MINUS
+<dead-circumflex> 0	⁰	SUPERSCRIPT ZERO
+<dead-circumflex> 1	¹	SUPERSCRIPT ONE
+<dead-circumflex> 2	²	SUPERSCRIPT TWO
+<dead-circumflex> 3	³	SUPERSCRIPT THREE
+<dead-circumflex> 4	⁴	SUPERSCRIPT FOUR
+<dead-circumflex> 5	⁵	SUPERSCRIPT FIVE
+<dead-circumflex> 6	⁶	SUPERSCRIPT SIX
+<dead-circumflex> 7	⁷	SUPERSCRIPT SEVEN
+<dead-circumflex> 8	⁸	SUPERSCRIPT EIGHT
+<dead-circumflex> 9	⁹	SUPERSCRIPT NINE
+<dead-circumflex> A	Â	LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+<dead-circumflex> E	Ê	LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+<dead-circumflex> I	Î	LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+<dead-circumflex> O	Ô	LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+<dead-circumflex> U	Û	LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+<dead-circumflex> W	Ŵ	LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+<dead-circumflex> Y	Ŷ	LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
+<dead-circumflex> a	â	LATIN SMALL LETTER A WITH CIRCUMFLEX
+<dead-circumflex> e	ê	LATIN SMALL LETTER E WITH CIRCUMFLEX
+<dead-circumflex> i	î	LATIN SMALL LETTER I WITH CIRCUMFLEX
+<dead-circumflex> o	ô	LATIN SMALL LETTER O WITH CIRCUMFLEX
+<dead-circumflex> u	û	LATIN SMALL LETTER U WITH CIRCUMFLEX
+<dead-circumflex> w	ŵ	LATIN SMALL LETTER W WITH CIRCUMFLEX
+<dead-circumflex> y	ŷ	LATIN SMALL LETTER Y WITH CIRCUMFLEX
+<dead-circum> SPC	^	CIRCUMFLEX ACCENT
+<dead-circum> +	⁺	SUPERSCRIPT PLUS SIGN
+<dead-circum> -	⁻	SUPERSCRIPT MINUS
+<dead-circum> 0	⁰	SUPERSCRIPT ZERO
+<dead-circum> 1	¹	SUPERSCRIPT ONE
+<dead-circum> 2	²	SUPERSCRIPT TWO
+<dead-circum> 3	³	SUPERSCRIPT THREE
+<dead-circum> 4	⁴	SUPERSCRIPT FOUR
+<dead-circum> 5	⁵	SUPERSCRIPT FIVE
+<dead-circum> 6	⁶	SUPERSCRIPT SIX
+<dead-circum> 7	⁷	SUPERSCRIPT SEVEN
+<dead-circum> 8	⁸	SUPERSCRIPT EIGHT
+<dead-circum> 9	⁹	SUPERSCRIPT NINE
+<dead-circum> A	Â	LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+<dead-circum> E	Ê	LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+<dead-circum> I	Î	LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+<dead-circum> O	Ô	LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+<dead-circum> U	Û	LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+<dead-circum> W	Ŵ	LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+<dead-circum> Y	Ŷ	LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
+<dead-circum> a	â	LATIN SMALL LETTER A WITH CIRCUMFLEX
+<dead-circum> e	ê	LATIN SMALL LETTER E WITH CIRCUMFLEX
+<dead-circum> i	î	LATIN SMALL LETTER I WITH CIRCUMFLEX
+<dead-circum> o	ô	LATIN SMALL LETTER O WITH CIRCUMFLEX
+<dead-circum> u	û	LATIN SMALL LETTER U WITH CIRCUMFLEX
+<dead-circum> w	ŵ	LATIN SMALL LETTER W WITH CIRCUMFLEX
+<dead-circum> y	ŷ	LATIN SMALL LETTER Y WITH CIRCUMFLEX
+<dead-asciicircum> SPC	^	CIRCUMFLEX ACCENT
+<dead-asciicircum> +	⁺	SUPERSCRIPT PLUS SIGN
+<dead-asciicircum> -	⁻	SUPERSCRIPT MINUS
+<dead-asciicircum> 0	⁰	SUPERSCRIPT ZERO
+<dead-asciicircum> 1	¹	SUPERSCRIPT ONE
+<dead-asciicircum> 2	²	SUPERSCRIPT TWO
+<dead-asciicircum> 3	³	SUPERSCRIPT THREE
+<dead-asciicircum> 4	⁴	SUPERSCRIPT FOUR
+<dead-asciicircum> 5	⁵	SUPERSCRIPT FIVE
+<dead-asciicircum> 6	⁶	SUPERSCRIPT SIX
+<dead-asciicircum> 7	⁷	SUPERSCRIPT SEVEN
+<dead-asciicircum> 8	⁸	SUPERSCRIPT EIGHT
+<dead-asciicircum> 9	⁹	SUPERSCRIPT NINE
+<dead-asciicircum> A	Â	LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+<dead-asciicircum> E	Ê	LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+<dead-asciicircum> I	Î	LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+<dead-asciicircum> O	Ô	LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+<dead-asciicircum> U	Û	LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+<dead-asciicircum> W	Ŵ	LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+<dead-asciicircum> Y	Ŷ	LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
+<dead-asciicircum> a	â	LATIN SMALL LETTER A WITH CIRCUMFLEX
+<dead-asciicircum> e	ê	LATIN SMALL LETTER E WITH CIRCUMFLEX
+<dead-asciicircum> i	î	LATIN SMALL LETTER I WITH CIRCUMFLEX
+<dead-asciicircum> o	ô	LATIN SMALL LETTER O WITH CIRCUMFLEX
+<dead-asciicircum> u	û	LATIN SMALL LETTER U WITH CIRCUMFLEX
+<dead-asciicircum> w	ŵ	LATIN SMALL LETTER W WITH CIRCUMFLEX
+<dead-asciicircum> y	ŷ	LATIN SMALL LETTER Y WITH CIRCUMFLEX
+<mute-asciicircum> SPC	^	CIRCUMFLEX ACCENT
+<mute-asciicircum> +	⁺	SUPERSCRIPT PLUS SIGN
+<mute-asciicircum> -	⁻	SUPERSCRIPT MINUS
+<mute-asciicircum> 0	⁰	SUPERSCRIPT ZERO
+<mute-asciicircum> 1	¹	SUPERSCRIPT ONE
+<mute-asciicircum> 2	²	SUPERSCRIPT TWO
+<mute-asciicircum> 3	³	SUPERSCRIPT THREE
+<mute-asciicircum> 4	⁴	SUPERSCRIPT FOUR
+<mute-asciicircum> 5	⁵	SUPERSCRIPT FIVE
+<mute-asciicircum> 6	⁶	SUPERSCRIPT SIX
+<mute-asciicircum> 7	⁷	SUPERSCRIPT SEVEN
+<mute-asciicircum> 8	⁸	SUPERSCRIPT EIGHT
+<mute-asciicircum> 9	⁹	SUPERSCRIPT NINE
+<mute-asciicircum> A	Â	LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+<mute-asciicircum> E	Ê	LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+<mute-asciicircum> I	Î	LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+<mute-asciicircum> O	Ô	LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+<mute-asciicircum> U	Û	LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+<mute-asciicircum> W	Ŵ	LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+<mute-asciicircum> Y	Ŷ	LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
+<mute-asciicircum> a	â	LATIN SMALL LETTER A WITH CIRCUMFLEX
+<mute-asciicircum> e	ê	LATIN SMALL LETTER E WITH CIRCUMFLEX
+<mute-asciicircum> i	î	LATIN SMALL LETTER I WITH CIRCUMFLEX
+<mute-asciicircum> o	ô	LATIN SMALL LETTER O WITH CIRCUMFLEX
+<mute-asciicircum> u	û	LATIN SMALL LETTER U WITH CIRCUMFLEX
+<mute-asciicircum> w	ŵ	LATIN SMALL LETTER W WITH CIRCUMFLEX
+<mute-asciicircum> y	ŷ	LATIN SMALL LETTER Y WITH CIRCUMFLEX
+A-^ SPC   	^	CIRCUMFLEX ACCENT
+A-^ +     	⁺	SUPERSCRIPT PLUS SIGN
+A-^ -     	⁻	SUPERSCRIPT MINUS
+A-^ 0     	⁰	SUPERSCRIPT ZERO
+A-^ 1     	¹	SUPERSCRIPT ONE
+A-^ 2     	²	SUPERSCRIPT TWO
+A-^ 3     	³	SUPERSCRIPT THREE
+A-^ 4     	⁴	SUPERSCRIPT FOUR
+A-^ 5     	⁵	SUPERSCRIPT FIVE
+A-^ 6     	⁶	SUPERSCRIPT SIX
+A-^ 7     	⁷	SUPERSCRIPT SEVEN
+A-^ 8     	⁸	SUPERSCRIPT EIGHT
+A-^ 9     	⁹	SUPERSCRIPT NINE
+A-^ A     	Â	LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+A-^ E     	Ê	LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+A-^ I     	Î	LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+A-^ O     	Ô	LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+A-^ U     	Û	LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+A-^ W     	Ŵ	LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+A-^ Y     	Ŷ	LATIN CAPITAL LETTER Y WITH CIRCUMFLEX
+A-^ a     	â	LATIN SMALL LETTER A WITH CIRCUMFLEX
+A-^ e     	ê	LATIN SMALL LETTER E WITH CIRCUMFLEX
+A-^ i     	î	LATIN SMALL LETTER I WITH CIRCUMFLEX
+A-^ o     	ô	LATIN SMALL LETTER O WITH CIRCUMFLEX
+A-^ u     	û	LATIN SMALL LETTER U WITH CIRCUMFLEX
+A-^ w     	ŵ	LATIN SMALL LETTER W WITH CIRCUMFLEX
+A-^ y     	ŷ	LATIN SMALL LETTER Y WITH CIRCUMFLEX
+A-= =     	¯	MACRON
+A-= A     	Ā	LATIN CAPITAL LETTER A WITH MACRON
+A-= E     	Ē	LATIN CAPITAL LETTER E WITH MACRON
+A-= G     	Ḡ	LATIN CAPITAL LETTER G WITH MACRON
+A-= I     	Ī	LATIN CAPITAL LETTER I WITH MACRON
+A-= O     	Ō	LATIN CAPITAL LETTER O WITH MACRON
+A-= U     	Ū	LATIN CAPITAL LETTER U WITH MACRON
+A-= Y     	Ȳ	LATIN CAPITAL LETTER Y WITH MACRON
+A-= a     	ā	LATIN SMALL LETTER A WITH MACRON
+A-= e     	ē	LATIN SMALL LETTER E WITH MACRON
+A-= g     	ḡ	LATIN SMALL LETTER G WITH MACRON
+A-= i     	ī	LATIN SMALL LETTER I WITH MACRON
+A-= o     	ō	LATIN SMALL LETTER O WITH MACRON
+A-= u     	ū	LATIN SMALL LETTER U WITH MACRON
+A-= y     	ȳ	LATIN SMALL LETTER Y WITH MACRON
+A-1 +     	†	DAGGER
+A-/ /     	÷	DIVISION SIGN
+A-/ =     	≠	NOT EQUAL TO
+A-/ A     	Å	LATIN CAPITAL LETTER A WITH RING ABOVE
+A-/ E     	Æ	LATIN CAPITAL LETTER AE
+A-/ L     	Ł	LATIN CAPITAL LETTER L WITH STROKE
+A-/ O     	Ø	LATIN CAPITAL LETTER O WITH STROKE
+A-/ a     	å	LATIN SMALL LETTER A WITH RING ABOVE
+A-/ e     	æ	LATIN SMALL LETTER AE
+A-/ l     	ł	LATIN SMALL LETTER L WITH STROKE
+A-/ o     	ø	LATIN SMALL LETTER O WITH STROKE
+A-. .     	·	MIDDLE DOT
+A-. I     	İ	LATIN CAPITAL LETTER I WITH DOT ABOVE
+A-. i     	ı	LATIN SMALL LETTER DOTLESS I
+A-. z     	ż	LATIN SMALL LETTER Z WITH DOT ABOVE
+A-, "     	„	DOUBLE LOW-9 QUOTATION MARK
+A-, '     	‚	SINGLE LOW-9 QUOTATION MARK
+A-, ,     	¸	CEDILLA
+A-, A     	Ą	LATIN CAPITAL LETTER A WITH OGONEK
+A-, C     	Ç	LATIN CAPITAL LETTER C WITH CEDILLA
+A-, N     	Ņ	LATIN CAPITAL LETTER N WITH CEDILLA
+A-, S     	Ş	LATIN CAPITAL LETTER S WITH CEDILLA
+A-, a     	ą	LATIN SMALL LETTER A WITH OGONEK
+A-, c     	ç	LATIN SMALL LETTER C WITH CEDILLA
+A-, n     	ņ	LATIN SMALL LETTER N WITH CEDILLA
+A-, s     	ş	LATIN SMALL LETTER S WITH CEDILLA
+S-<dead-acute> SPC	'	APOSTROPHE
+S-<dead-acute> '	´	ACUTE ACCENT
+S-<dead-acute> A	Á	LATIN CAPITAL LETTER A WITH ACUTE
+S-<dead-acute> C	Ć	LATIN CAPITAL LETTER C WITH ACUTE
+S-<dead-acute> E	É	LATIN CAPITAL LETTER E WITH ACUTE
+S-<dead-acute> I	Í	LATIN CAPITAL LETTER I WITH ACUTE
+S-<dead-acute> N	Ń	LATIN CAPITAL LETTER N WITH ACUTE
+S-<dead-acute> O	Ó	LATIN CAPITAL LETTER O WITH ACUTE
+S-<dead-acute> S	Ś	LATIN CAPITAL LETTER S WITH ACUTE
+S-<dead-acute> U	Ú	LATIN CAPITAL LETTER U WITH ACUTE
+S-<dead-acute> Y	Ý	LATIN CAPITAL LETTER Y WITH ACUTE
+S-<dead-acute> Z	Ź	LATIN CAPITAL LETTER Z WITH ACUTE
+S-<dead-acute> a	á	LATIN SMALL LETTER A WITH ACUTE
+S-<dead-acute> c	ć	LATIN SMALL LETTER C WITH ACUTE
+S-<dead-acute> e	é	LATIN SMALL LETTER E WITH ACUTE
+S-<dead-acute> i	í	LATIN SMALL LETTER I WITH ACUTE
+S-<dead-acute> n	ń	LATIN SMALL LETTER N WITH ACUTE
+S-<dead-acute> o	ó	LATIN SMALL LETTER O WITH ACUTE
+S-<dead-acute> s	ś	LATIN SMALL LETTER S WITH ACUTE
+S-<dead-acute> u	ú	LATIN SMALL LETTER U WITH ACUTE
+S-<dead-acute> y	ý	LATIN SMALL LETTER Y WITH ACUTE
+S-<dead-acute> z	ź	LATIN SMALL LETTER Z WITH ACUTE
+<dead-acute> SPC	'	APOSTROPHE
+<dead-acute> '	´	ACUTE ACCENT
+<dead-acute> A	Á	LATIN CAPITAL LETTER A WITH ACUTE
+<dead-acute> C	Ć	LATIN CAPITAL LETTER C WITH ACUTE
+<dead-acute> E	É	LATIN CAPITAL LETTER E WITH ACUTE
+<dead-acute> I	Í	LATIN CAPITAL LETTER I WITH ACUTE
+<dead-acute> N	Ń	LATIN CAPITAL LETTER N WITH ACUTE
+<dead-acute> O	Ó	LATIN CAPITAL LETTER O WITH ACUTE
+<dead-acute> S	Ś	LATIN CAPITAL LETTER S WITH ACUTE
+<dead-acute> U	Ú	LATIN CAPITAL LETTER U WITH ACUTE
+<dead-acute> Y	Ý	LATIN CAPITAL LETTER Y WITH ACUTE
+<dead-acute> Z	Ź	LATIN CAPITAL LETTER Z WITH ACUTE
+<dead-acute> a	á	LATIN SMALL LETTER A WITH ACUTE
+<dead-acute> c	ć	LATIN SMALL LETTER C WITH ACUTE
+<dead-acute> e	é	LATIN SMALL LETTER E WITH ACUTE
+<dead-acute> i	í	LATIN SMALL LETTER I WITH ACUTE
+<dead-acute> n	ń	LATIN SMALL LETTER N WITH ACUTE
+<dead-acute> o	ó	LATIN SMALL LETTER O WITH ACUTE
+<dead-acute> s	ś	LATIN SMALL LETTER S WITH ACUTE
+<dead-acute> u	ú	LATIN SMALL LETTER U WITH ACUTE
+<dead-acute> y	ý	LATIN SMALL LETTER Y WITH ACUTE
+<dead-acute> z	ź	LATIN SMALL LETTER Z WITH ACUTE
+<mute-acute> SPC	'	APOSTROPHE
+
+Function key map translations:
+C-@       	C-SPC
+C-M-S-<kp-0>	C-M-S-0
+C-M-S-<kp-1>	C-M-S-1
+C-M-S-<kp-2>	C-M-S-2
+C-M-S-<kp-3>	C-M-S-3
+C-M-S-<kp-4>	C-M-S-4
+C-M-S-<kp-5>	C-M-S-5
+C-M-S-<kp-6>	C-M-S-6
+C-M-S-<kp-7>	C-M-S-7
+C-M-S-<kp-8>	C-M-S-8
+C-M-S-<kp-9>	C-M-S-9
+C-M-S-<kp-add>	C-M-S-+
+C-M-S-<kp-begin>	C-M-S-<begin>
+C-M-S-<kp-decimal>	C-M-S-.
+C-M-S-<kp-delete>	C-M-S-<delete>
+C-M-S-<kp-divide>	C-M-S-/
+C-M-S-<kp-down>	C-M-S-<down>
+C-M-S-<kp-end>	C-M-S-<end>
+C-M-S-<kp-enter>	C-M-S-<enter>
+C-M-S-<kp-home>	C-M-S-<home>
+C-M-S-<kp-insert>	C-M-S-<insert>
+C-M-S-<kp-left>	C-M-S-<left>
+C-M-S-<kp-multiply>	C-M-S-*
+C-M-S-<kp-next>	C-M-S-<next>
+C-M-S-<kp-prior>	C-M-S-<prior>
+C-M-S-<kp-right>	C-M-S-<right>
+C-M-S-<kp-subtract>	C-M-S--
+C-M-S-<kp-up>	C-M-S-<up>
+C-M-<kp-0>	C-M-0
+C-M-<kp-1>	C-M-1
+C-M-<kp-2>	C-M-2
+C-M-<kp-3>	C-M-3
+C-M-<kp-4>	C-M-4
+C-M-<kp-5>	C-M-5
+C-M-<kp-6>	C-M-6
+C-M-<kp-7>	C-M-7
+C-M-<kp-8>	C-M-8
+C-M-<kp-9>	C-M-9
+C-M-<kp-add>	C-M-+
+C-M-<kp-begin>	C-M-<begin>
+C-M-<kp-decimal>	C-M-.
+C-M-<kp-delete>	C-M-<delete>
+C-M-<kp-divide>	C-M-/
+C-M-<kp-down>	C-M-<down>
+C-M-<kp-end>	C-M-<end>
+C-M-<kp-enter>	C-M-<enter>
+C-M-<kp-home>	C-M-<home>
+C-M-<kp-insert>	C-M-<insert>
+C-M-<kp-left>	C-M-<left>
+C-M-<kp-multiply>	C-M-*
+C-M-<kp-next>	C-M-<next>
+C-M-<kp-prior>	C-M-<prior>
+C-M-<kp-right>	C-M-<right>
+C-M-<kp-subtract>	C-M--
+C-M-<kp-up>	C-M-<up>
+C-S-<kp-0>	C-S-0
+C-S-<kp-1>	C-S-1
+C-S-<kp-2>	C-S-2
+C-S-<kp-3>	C-S-3
+C-S-<kp-4>	C-S-4
+C-S-<kp-5>	C-S-5
+C-S-<kp-6>	C-S-6
+C-S-<kp-7>	C-S-7
+C-S-<kp-8>	C-S-8
+C-S-<kp-9>	C-S-9
+C-S-<kp-add>	C-S-+
+C-S-<kp-begin>	C-S-<begin>
+C-S-<kp-decimal>	C-S-.
+C-S-<kp-delete>	C-S-<delete>
+C-S-<kp-divide>	C-S-/
+C-S-<kp-down>	C-S-<down>
+C-S-<kp-end>	C-S-<end>
+C-S-<kp-enter>	C-S-<enter>
+C-S-<kp-home>	C-S-<home>
+C-S-<kp-insert>	C-S-<insert>
+C-S-<kp-left>	C-S-<left>
+C-S-<kp-multiply>	C-S-*
+C-S-<kp-next>	C-S-<next>
+C-S-<kp-prior>	C-S-<prior>
+C-S-<kp-right>	C-S-<right>
+C-S-<kp-subtract>	C-S--
+C-S-<kp-up>	C-S-<up>
+C-<kp-0>  	C-0
+C-<kp-1>  	C-1
+C-<kp-2>  	C-2
+C-<kp-3>  	C-3
+C-<kp-4>  	C-4
+C-<kp-5>  	C-5
+C-<kp-6>  	C-6
+C-<kp-7>  	C-7
+C-<kp-8>  	C-8
+C-<kp-9>  	C-9
+C-<kp-add>	C-+
+C-<kp-begin>	C-<begin>
+C-<kp-decimal>	C-.
+C-<kp-delete>	C-<delete>
+C-<kp-divide>	C-/
+C-<kp-down>	C-<down>
+C-<kp-end>	C-<end>
+C-<kp-enter>	C-<enter>
+C-<kp-home>	C-<home>
+C-<kp-insert>	C-<insert>
+C-<kp-left>	C-<left>
+C-<kp-multiply>	C-*
+C-<kp-next>	C-<next>
+C-<kp-prior>	C-<prior>
+C-<kp-right>	C-<right>
+C-<kp-subtract>	C--
+C-<kp-up> 	C-<up>
+M-S-<kp-0>	M-S-0
+M-S-<kp-1>	M-S-1
+M-S-<kp-2>	M-S-2
+M-S-<kp-3>	M-S-3
+M-S-<kp-4>	M-S-4
+M-S-<kp-5>	M-S-5
+M-S-<kp-6>	M-S-6
+M-S-<kp-7>	M-S-7
+M-S-<kp-8>	M-S-8
+M-S-<kp-9>	M-S-9
+M-S-<kp-add>	M-S-+
+M-S-<kp-begin>	M-S-<begin>
+M-S-<kp-decimal>	M-S-.
+M-S-<kp-delete>	M-S-<delete>
+M-S-<kp-divide>	M-S-/
+M-S-<kp-down>	M-S-<down>
+M-S-<kp-end>	M-S-<end>
+M-S-<kp-enter>	M-S-<enter>
+M-S-<kp-home>	M-S-<home>
+M-S-<kp-insert>	M-S-<insert>
+M-S-<kp-left>	M-S-<left>
+M-S-<kp-multiply>	M-S-*
+M-S-<kp-next>	M-S-<next>
+M-S-<kp-prior>	M-S-<prior>
+M-S-<kp-right>	M-S-<right>
+M-S-<kp-subtract>	M-S--
+M-S-<kp-up>	M-S-<up>
+M-<backspace>	M-DEL
+M-<clear> 	C-M-l
+M-<delete>	M-DEL
+M-<escape>	M-ESC
+M-<kp-0>  	M-0
+M-<kp-1>  	M-1
+M-<kp-2>  	M-2
+M-<kp-3>  	M-3
+M-<kp-4>  	M-4
+M-<kp-5>  	M-5
+M-<kp-6>  	M-6
+M-<kp-7>  	M-7
+M-<kp-8>  	M-8
+M-<kp-9>  	M-9
+M-<kp-add>	M-+
+M-<kp-begin>	M-<begin>
+M-<kp-decimal>	M-.
+M-<kp-delete>	M-<delete>
+M-<kp-divide>	M-/
+M-<kp-down>	M-<down>
+M-<kp-end>	M-<end>
+M-<kp-enter>	M-<enter>
+M-<kp-home>	M-<home>
+M-<kp-insert>	M-<insert>
+M-<kp-left>	M-<left>
+M-<kp-multiply>	M-*
+M-<kp-next>	M-<next>
+M-<kp-prior>	M-<prior>
+M-<kp-right>	M-<right>
+M-<kp-subtract>	M--
+M-<kp-up> 	M-<up>
+M-<linefeed>	C-M-j
+M-<return>	M-RET
+M-<tab>   	C-M-i
+S-<iso-lefttab>	<backtab>
+S-<kp-0>  	S-0
+S-<kp-1>  	S-1
+S-<kp-2>  	S-2
+S-<kp-3>  	S-3
+S-<kp-4>  	S-4
+S-<kp-5>  	S-5
+S-<kp-6>  	S-6
+S-<kp-7>  	S-7
+S-<kp-8>  	S-8
+S-<kp-9>  	S-9
+S-<kp-add>	S-+
+S-<kp-begin>	S-<begin>
+S-<kp-decimal>	S-.
+S-<kp-delete>	S-<delete>
+S-<kp-divide>	S-/
+S-<kp-down>	S-<down>
+S-<kp-end>	S-<end>
+S-<kp-enter>	S-<enter>
+S-<kp-home>	S-<home>
+S-<kp-insert>	S-<insert>
+S-<kp-left>	S-<left>
+S-<kp-multiply>	S-*
+S-<kp-next>	S-<next>
+S-<kp-prior>	S-<prior>
+S-<kp-right>	S-<right>
+S-<kp-subtract>	S--
+S-<kp-up> 	S-<up>
+S-<tab>   	<backtab>
+<backspace>	DEL	DELETE
+<clear>   	C-l	FORM FEED (FF)
+<delete>  	<deletechar>
+<escape>  	ESC	ESCAPE
+<iso-lefttab>	<backtab>
+<kp-0>    	0	DIGIT ZERO
+<kp-1>    	1	DIGIT ONE
+<kp-2>    	2	DIGIT TWO
+<kp-3>    	3	DIGIT THREE
+<kp-4>    	4	DIGIT FOUR
+<kp-5>    	5	DIGIT FIVE
+<kp-6>    	6	DIGIT SIX
+<kp-7>    	7	DIGIT SEVEN
+<kp-8>    	8	DIGIT EIGHT
+<kp-9>    	9	DIGIT NINE
+<kp-add>  	+	PLUS SIGN
+<kp-begin>	<begin>
+<kp-decimal>	.	FULL STOP
+<kp-delete>	<deletechar>
+<kp-divide>	/	SOLIDUS
+<kp-down> 	<down>
+<kp-end>  	<end>
+<kp-enter>	RET	CARRIAGE RETURN (CR)
+<kp-equal>	=	EQUALS SIGN
+<kp-home> 	<home>
+<kp-insert>	<insert>
+<kp-left> 	<left>
+<kp-multiply>	*	ASTERISK
+<kp-next> 	<next>
+<kp-prior>	<prior>
+<kp-right>	<right>
+<kp-separator>	,	COMMA
+<kp-space>	SPC	SPACE
+<kp-subtract>	-	HYPHEN-MINUS
+<kp-tab>  	TAB	CHARACTER TABULATION
+<kp-up>   	<up>
+<linefeed>	C-j	LINE FEED (LF)
+<return>  	RET	CARRIAGE RETURN (CR)
+<tab>     	TAB	CHARACTER TABULATION
+<touchscreen-begin>	touch-screen-translate-touch
+<touchscreen-end>	touch-screen-translate-touch
+<touchscreen-update>	touch-screen-translate-touch
+<vertical-line> <touchscreen-begin>	touch-screen-translate-touch
+<vertical-line> <touchscreen-end>	touch-screen-translate-touch
+<tab-line> <touchscreen-begin>	touch-screen-translate-touch
+<tab-line> <touchscreen-end>	touch-screen-translate-touch
+<tab-bar> <touchscreen-begin>	touch-screen-translate-touch
+<tab-bar> <touchscreen-end>	touch-screen-translate-touch
+<tool-bar> <touchscreen-begin>	touch-screen-translate-touch
+<tool-bar> <touchscreen-end>	touch-screen-translate-touch
+<right-margin> <touchscreen-begin> touch-screen-translate-touch	 touch-screen-translate-touch
+<left-margin> <touchscreen-begin>	touch-screen-translate-touch
+<left-margin> <touchscreen-end>	touch-screen-translate-touch
+<right-divider> <touchscreen-begin>	touch-screen-translate-touch
+<right-divider> <touchscreen-end>	touch-screen-translate-touch
+<bottom-divider> <touchscreen-begin> touch-screen-translate-touch	 touch-screen-translate-touch
+<header-line> <touchscreen-begin>	touch-screen-translate-touch
+<header-line> <touchscreen-end>	touch-screen-translate-touch
+<nil> <touchscreen-begin>	touch-screen-translate-touch
+<nil> <touchscreen-end>	touch-screen-translate-touch
+<mode-line> <touchscreen-begin>	touch-screen-translate-touch
+<mode-line> <touchscreen-end>	touch-screen-translate-touch
+<right-fringe> <mouse-1>	 mouse--strip-first-event
+<right-fringe> <mouse-2>	 mouse--strip-first-event
+<right-fringe> <mouse-3>	 mouse--strip-first-event
+<right-fringe> <touchscreen-begin> touch-screen-translate-touch	 touch-screen-translate-touch
+<left-fringe> <mouse-1>	mouse--strip-first-event
+<left-fringe> <mouse-2>	mouse--strip-first-event
+<left-fringe> <mouse-3>	mouse--strip-first-event
+<left-fringe> <touchscreen-begin>	touch-screen-translate-touch
+<left-fringe> <touchscreen-end>	touch-screen-translate-touch
+C-x @ S   	event-apply-shift-modifier
+C-x @ a   	event-apply-alt-modifier
+C-x @ c   	event-apply-control-modifier
+C-x @ h   	event-apply-hyper-modifier
+C-x @ m   	event-apply-meta-modifier
+C-x @ s   	event-apply-super-modifier

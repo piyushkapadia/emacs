@@ -1,0 +1,136 @@
+#+TITLE: Setup Spacemacs
+
+* Hunspell and Flyspell on Windows
+
+The =spell-checking= layer uses Emacs' Ispell interface for Flyspell. On Windows,
+install the Hunspell command-line executable and at least one Hunspell
+dictionary. For a dictionary such as US English, Hunspell needs the matching
+=en_US.aff= and =en_US.dic= files. Keep both files in the same dictionary
+directory.
+
+** Install and verify Hunspell
+
+1. Install a Windows build of Hunspell and a dictionary from a trusted package
+   source.
+2. Add the directory containing =hunspell.exe= to the Windows =PATH=, or use its
+   full path as =ispell-program-name= in the Emacs configuration below.
+3. Put =en_US.aff= and =en_US.dic= in a known directory, for example
+   =C:/Hunspell/dict/=.
+4. Restart Emacs so it receives the updated Windows environment.
+5. In PowerShell, verify that =hunspell.exe= is discoverable with
+   =Get-Command hunspell.exe=.
+
+Hunspell's message mentioning an unset =LANG= can be misleading when Emacs is
+requesting a dictionary literally named =default=. Setting =ispell-dictionary=
+to the installed dictionary name (for example, =en_US=) and pointing Emacs to
+the matching affix file avoids relying on locale-based dictionary selection.
+
+** Configure Emacs
+
+Add this to =dotspacemacs/user-init= in =~/.spacemacs=. Use forward slashes in
+Windows paths. If Hunspell is not on =PATH=, replace ="hunspell"= with the full
+path to =hunspell.exe=.
+
+#+begin_src emacs-lisp
+(setq ispell-program-name "hunspell"
+      ispell-dictionary "en_US"
+      ispell-local-dictionary "en_US"
+      ispell-hunspell-dict-paths-alist
+      '(("en_US" . "C:/Hunspell/dict/en_US.aff")))
+#+end_src
+
+The dictionary name must match the basename of the dictionary files, and the
+affix path must point to the matching =.aff= file. Hunspell locates the paired
+=.dic= file beside it.
+
+Then test from Emacs:
+
+1. Run =M-x ispell-change-dictionary= and choose =en_US=.
+2. Run =M-x ispell-buffer= in a text buffer. Hunspell should check the buffer
+   without reporting missing dictionary files.
+3. Run =M-x flyspell-mode= to check spelling interactively, or use the
+   Spacemacs spelling transient state with =M-m S .=.
+
+** Automatic checking
+
+Automatic Flyspell is temporarily disabled in this configuration until Hunspell
+and its dictionary are installed. In =dotspacemacs/layers= the spelling layer is
+currently declared as:
+
+#+begin_src emacs-lisp
+(spell-checking :variables
+                spell-checking-enable-by-default nil)
+#+end_src
+
+After the manual buffer test succeeds, change =nil= to =t= and restart Emacs to
+enable automatic checking in the modes covered by the =spell-checking= layer.
+Keep it =nil= to avoid Flyspell startup errors on machines where Hunspell or
+the selected dictionary is unavailable; Flyspell can still be enabled manually.
+
+* Startup warning notes
+
+The =wgrep= package is provided by Spacemacs' editing layer, and =magit-delta=
+by its Git layer. The =my-settings= layer extends those initializers rather
+than declaring duplicate package owners. Git Delta activation is enabled in
+the Git layer and guarded by checking that the =delta= executable is available.
+
+The private layer defines =evil-collection-binding-overrides= before package
+configuration. Spacemacs' Dired Quick Sort setup references this variable to
+protect a Dired binding, but Evil Collection is disabled for the configured
+Emacs editing style. Defining the optional variable as nil avoids a void-variable
+error without enabling Evil Collection.
+
+The Dired+ startup path must not put an =interactive-form= symbol property on
+=dired= commands: Which Key errors when it encounters such a property. The
+current local source does not set that property. Its active legacy =defadvice=
+forms were replaced with =define-advice= and =advice-add=; historical mentions
+of =defadvice= remain in the upstream change log and comments only.
+
+The =spell-checking= layer currently sets =spell-checking-enable-by-default= to
+=nil= because Flyspell previously attempted to open a dictionary called
+=default=. Configure Hunspell and an explicit dictionary above before changing
+this setting to =t=.
+
+The local Dired+ source now uses =define-advice= and =advice-add= instead of
+active legacy =defadvice= declarations. Its full Dired+ key reference is in
+=[[file:../local/dired+/README.org][the local Dired+ README]]=.
+
+** MSYS2 utilities on Windows
+
+The =my-settings= layer prepends =D:/Dev/Tools/msys64/usr/bin= to Emacs'
+=exec-path= and the child-process =PATH=. This makes MSYS2 tools such as =diff.exe=
+available to Ediff and other Emacs subprocesses, and gives this directory
+priority over other versions of commands with the same name. Dired is explicitly
+configured to call =D:/Dev/Tools/msys64/usr/bin/ls.exe= with
+=ls-lisp-use-insert-directory-program= enabled, allowing Dired Quick Sort to use
+GNU =ls=.
+
+To verify from Emacs, evaluate =(executable-find "diff")= and
+=(executable-find "ls")=; both should resolve under =D:/Dev/Tools/msys64/usr/bin=.
+Run =M-: (call-process "D:/Dev/Tools/msys64/usr/bin/ls.exe" nil t nil "--version")=
+to confirm the =ls= build identifies itself as GNU Coreutils, which Dired Quick
+Sort requires. Restart Emacs after changing this configuration.
+
+Because MSYS2 now takes precedence for every Emacs child process, tools such as
+=find=, =sort=, and =link= may also resolve to their MSYS2 versions. If a package
+needs a specific Windows-native executable, configure its full executable path
+instead of relying on name lookup.
+
+** Dired Quick Sort
+
+Dired Quick Sort is supplied and initialized by Spacemacs' editing layer, not
+by =my-settings=. It expects GNU =ls= and is set up automatically when Dired is
+opened. In Dired, press =S= for its transient sorting menu. The menu supports
+name/version, time, size, extension, and default sorting, as well as reverse
+order and grouping directories first. The package stores the last selections in
+=savehist-mode= history, so enable =savehist-mode= if you want those choices to
+persist across Emacs restarts.
+
+If the message says =ls-lisp-use-insert-directory-program= is nil, check that
+=my-settings/config.el= has run and that =insert-directory-program= points to
+the existing MSYS2 =ls.exe=. Do not just suppress the warning: with no GNU =ls=,
+the package intentionally skips setup. Confirm from Emacs with
+=(executable-find "ls")=, =(executable-find "diff")=, and
+=(call-process "D:/Dev/Tools/msys64/usr/bin/ls.exe" nil t nil "--version")=.
+After configuration changes, restart Emacs; after opening Dired, =S= should
+bring up the sorting menu.

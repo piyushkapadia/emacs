@@ -13,7 +13,8 @@
   ;; Use CUA's global map so major modes cannot shadow these bindings.
   (define-key cua-global-keymap (kbd "C-a") #'mark-whole-buffer)
   (define-key cua-global-keymap (kbd "C-y") #'undo-redo)
-  (define-key cua-global-keymap (kbd "C-f") #'isearch-forward))
+  (define-key cua-global-keymap (kbd "C-f") #'isearch-forward)
+  (define-key cua-global-keymap (kbd "C-w") #'kill-region))
 
 (global-set-key (kbd "C-c r") #'my-settings-query-replace)
 

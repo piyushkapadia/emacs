@@ -132,15 +132,17 @@ rendered when inserted directly.
 
 Editing the managed ELPA copy and freezing it was considered, but a local copy
 is easier to maintain. The Centaur Tabs source was placed in
-=my-settings/local/centaur-tabs=. In =packages.el= it is declared with
-=:location local=. The local =centaur-tabs-elements.el= was changed to accept an
-icon string when it is a string with non-zero length, instead of additionally
+=my-settings/local/centaur-tabs=. In =packages.el= it is declared using
+=:location local=. The local =centaur-tabs-elements.el= was changed to accept
+an icon string when it is a string with non-zero length, instead of additionally
 testing the bare first character with =char-displayable-p=. Emacs then preserves
 and renders the string's font properties.
 
-Use source =.el= files, not compiled =.elc= files, so stale bytecode cannot
-shadow the patch. Keep =powerline= available because Centaur Tabs declares it
-as a dependency.
+After switching to the local source, the old
+=elpa/31.1/develop/centaur-tabs-20260128.950= directory was absent. The local
+checkout has source files and no compiled =.elc= files, so stale bytecode does
+not shadow the patch. Keep =powerline= available because Centaur Tabs declares
+it as a dependency.
 
 ** 6. Resolve duplicate package ownership
 

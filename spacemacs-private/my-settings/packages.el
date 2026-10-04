@@ -23,7 +23,9 @@
 
 ;;; Code:
 (defconst my-settings-packages
-  '((centaur-tabs :location local))
+  '((centaur-tabs :location local)
+    visual-regexp-steroids
+    embark)
   "Packages initialized by the my-settings layer.")
 
 (defun my-settings/init-centaur-tabs ()
@@ -35,4 +37,22 @@
           centaur-tabs-set-icons t
           centaur-tabs-icon-type 'all-the-icons)
     (centaur-tabs-mode 1)))
+
+(defun my-settings/init-visual-regexp-steroids ()
+  (use-package visual-regexp-steroids
+    :demand t))
+
+(defun my-settings/init-embark ()
+  (use-package embark
+    :bind (("C-." . embark-act)
+           ("C-;" . embark-dwim)
+           ("C-h B" . embark-bindings))))
+
+(defun my-settings/post-init-magit-delta ()
+  (remove-hook 'magit-mode-hook #'magit-delta-mode)
+  (add-hook 'magit-mode-hook #'my-settings/magit-delta-enable-if-available))
+
+(defun my-settings/magit-delta-enable-if-available ()
+  (when (executable-find "delta")
+    (magit-delta-mode 1)))
 

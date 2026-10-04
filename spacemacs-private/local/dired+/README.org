@@ -1,0 +1,58 @@
+#+TITLE: Local Dired+
+
+* Installation and loading
+
+This directory contains the local Dired+ source, =dired+.el=. It is loaded by
+the =my-settings= layer after built-in Dired, using this directory on
+=load-path=. Keep the source file here. Dired+ is not an ELPA package: do not
+add it to =dotspacemacs-additional-packages= in =~/.spacemacs=. The ELPA packages
+used elsewhere by the layer are documented in
+[[../../my-settings/README.org][the my-settings README]].
+The upstream source is [[https://github.com/emacsmirror/dired-plus/blob/master/dired%2B.el][emacsmirror/dired-plus]].
+
+The layer also enables =dired-hide-details-mode= for Dired buffers and restores
+=C-k= to =dired-do-kill-lines= so that the key removes the current listing line
+instead of deleting the file.
+
+Dired Quick Sort is provided separately by Spacemacs' editing layer. It uses
+the GNU =ls.exe= in =D:/Dev/Tools/msys64/usr/bin=; press =S= in Dired to open
+its sort menu. The =my-settings= layer adds the MSYS2 directory to Emacs'
+=exec-path= and subprocess =PATH= so tools such as =diff.exe= are available to
+Ediff as well. See [[../../my-settings/Setup-Spacemacs.org][Setup-Spacemacs]] for the full utility-path setup.
+
+Typical file workflow: navigate to a file line, press =RET= to visit it, or
+=e= to display it in another window while keeping point in Dired. Mark entries
+with =m=, then use a Dired operation such as =C= to copy, =R= to move, or =D= to
+delete marked files (confirmation applies). Alternatively, flag entries with
+=d= and press =x= to execute deletion of flagged entries. Press =g= to reread the
+listing. Insert a subdirectory listing with =i= and toggle its visibility with
+=$=; =M-$= toggles visibility and advances to the next subdirectory.
+
+* Key bindings
+
+| Key | Action |
+|-----+--------|
+| =n= / =p=, =C-n= / =C-p=, =<down>= / =<up>= | Move between entries with wraparound |
+| =e= | Visit the file on the current line |
+| =C-<down>= / =C-<up>= | Visit the next/previous file in another window and keep focus in Dired |
+| =$= | Toggle current inserted subdirectory visibility without moving point |
+| =M-$= | Toggle subdirectory visibility and advance |
+| === | Compare the current file with another using Ediff |
+| =M-*= | Open a Dired listing of marked files in another window |
+| =C-M-*= | Open marked files from Dired buffers in another window |
+| =M-+= | Prefix map for recursive operations on marked files and subdirectories |
+| =C-x D A= | Add arbitrary files to the current Dired buffer |
+| =C-x D U= | Combine Dired listings into a union |
+| =C-x D R= / =C-x D r= | Open recent files / recent directories in Dired |
+| =C-x D S= | Open a fileset as a Dired listing |
+
+The =C-x D= commands are installed only when that prefix is not already in use.
+See the Dired+ commentary in =dired+.el= for recursive commands, snapshot
+listings, tags, image commands, and the full set of options.
+
+* CUA behavior in this setup
+
+CUA's global map retains =C-w= as =kill-region= and =C-y= as =undo-redo=, so
+those take precedence over Dired+'s file move and paste bindings. The
+=my-settings= layer binds =C-k= to =dired-do-kill-lines=; use Dired's =d= to
+flag files and =x= to execute flagged deletions.
